@@ -1,6 +1,7 @@
 ---
 title: "Liquid Blobs with Voxelized Marching Cubes in Minecraft"
 date: 2014-11-05
+categories: Graphics
 ---
 Test latex
 $$a^2 + b^2 = c^2$$
