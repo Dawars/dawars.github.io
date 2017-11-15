@@ -1,6 +1,6 @@
 theme: jekyll-theme-cayman
 
 name: Dawars
-markdown: kramdown
+markdown: redcarpet
 
 permalink: /:title/
