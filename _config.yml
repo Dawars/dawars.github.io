@@ -2,3 +2,5 @@ theme: jekyll-theme-cayman
 
 name: Dawars
 markdown: kramdown
+
+permalink: /:title
