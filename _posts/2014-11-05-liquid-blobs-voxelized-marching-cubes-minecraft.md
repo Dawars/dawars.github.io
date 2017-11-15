@@ -59,7 +59,7 @@ We want the surface to always align to the grid (Axis Aligned), making a nice mi
 
 I created a [Blobs](https://github.com/Dawars/CraftingPillars/blob/1.10.2/src/main/java/me/dawars/craftingpillars/client/render/Blobs.java) class to store the location, strength and velocity of the charges and functions to calculate the field strength.
 
-```
+{% highlight java %}{% raw %}
 public static float[][][] fieldStrength(List blobs) {
     float result[][][] = new float[16][16][16];      
     for(int x = 0; x < 16; x++) {
@@ -77,7 +77,8 @@ public static float[][][] fieldStrength(List blobs) {
     }
     return result; 
 }
-```
+{% endraw %}{% endhighlight %}
+
 
 This functions computes the field strength in a 16 * 16 * 16 grid according to the equation.
 
@@ -86,7 +87,7 @@ Next comes rendering.
 First we iterate through each grid point and check if it is inside a blob. If it is we may have to render the side of the blob. Imagine being at the centre of the blob, the neighbouring cells are still inside so we don’t need sides there. If we need to render a side we simply render a quad from 2 triangles.
 Here is the simplified code from the TileEntityRenderer:
 
-```
+{% highlight java %}{% raw %}
 Tessellator tess = Tessellator.getInstance();
 VertexBuffer buffer = tess.getBuffer();
 
@@ -150,13 +151,13 @@ for (int i = 0; i < 16; i++)
 tess.draw();
 
 buffer.setTranslation(0, 0, 0);
+{% endraw %}{% endhighlight %}
 
-```
 
 ## Animation
 As a last step we need to animate the blobs. I store a list of blobs in the TileEntity class of the Tank.
 In every tick/update I call the update function in the Blobs class for every charge:
-```
+{% highlight java %}{% raw %}
 public void update(float speed)
 {
     if(this.x > maxX || this.x < minX)
@@ -172,7 +173,8 @@ public void update(float speed)
     this.y += speed * this.velY;
     this.z += speed * this.velZ;
 }
-```
+{% endraw %}{% endhighlight %}
+
 This checks if a charge (centre of a blob) is colliding with the sides of our space. We will simulate perfectly elastic collisions, so we just need to multiply the respective velocity coordinate with -1.
 After that we update the position of the charge with its speed.
 
