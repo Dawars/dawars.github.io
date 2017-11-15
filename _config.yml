@@ -4,3 +4,5 @@ name: Dawars
 markdown: redcarpet
 
 permalink: /:title/
+
+excerpt_separator: "<!--more-->"

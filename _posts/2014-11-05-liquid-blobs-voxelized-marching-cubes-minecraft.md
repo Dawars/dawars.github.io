@@ -9,6 +9,7 @@ tags: Minecraft
 
 Nowadays every good tech/magic mod needs a form of liquid storage. As a result they look and behave very similarly. Our mod (<a href="http://www.minecraftforum.net/forums/mapping-and-modding-java-edition/minecraft-mods/1292336-crafting-pillars-mod-multiplayer-fix">Crafting Pillars</a>) is visually driven, hence I wanted to re-invent the way a Liquid Tank looks in-game while retaining the same functionality.
 
+<!--more-->
 ## The Idea
 Inspiration came from Portal 2 which I was playing at the time. The gels floating in the air form blobs which connect and get separated as they move relative to each other. This fitted the theme perfectly: an ancient, science fiction mod, building from stone but with technology that can compress even liquids.
 
