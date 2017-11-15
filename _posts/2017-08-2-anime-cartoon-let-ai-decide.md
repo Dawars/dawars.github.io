@@ -1,7 +1,7 @@
 ---
 title: "Anime or Cartoon? — Let the AI decide"
 date: 2017-08-02
-categories: Machine Learning
+categories: "Machine Learning"
 tags: Anime, Deep Learning
 ---
 
