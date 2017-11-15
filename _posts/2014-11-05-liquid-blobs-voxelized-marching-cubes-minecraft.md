@@ -82,14 +82,93 @@ Next comes rendering.
 
 First we iterate through each grid point and check if it is inside a blob. If it is we may have to render the side of the blob. Imagine being at the centre of the blob, the neighbouring cells are still inside so we don’t need sides there. If we need to render a side we simply render a quad from 2 triangles.
 Here is the simplified code from the TileEntityRenderer:
+
 ```
-Tessellator tess = Tessellator.getInstance(); VertexBuffer buffer = tess.getBuffer(); buffer.setTranslation(x, y, z); buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX); final float THRESHOLD = 1; float[][][] field = Blobs.fieldStrength(te.getBlobs()); for (int i = 0; i < 16; i++) for (int j = 0; j < 16; j++) for (int k = 0; k < 16; k++) if (field[i][j][k] >= THRESHOLD) { // Cell is in the blob if (j == 15 || field[i][j + 1][k] < THRESHOLD) { // neighbour is outside (or at space bound) buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); } if (j == 0 || (int) field[i][j - 1][k] < THRESHOLD) { buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); } if (k == 15 || (int) field[i][j][k + 1] < THRESHOLD) { buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); } if (k == 0 || (int) field[i][j][k - 1] < THRESHOLD) { buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex(); buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).endVertex(); buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); } if (i == 15 || (int) field[i + 1][j][k] < THRESHOLD) { buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex(); buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); } if (i == 0 || (int) field[i - 1][j][k] < THRESHOLD) { buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex(); buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex(); buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).endVertex(); } } tess.draw(); buffer.setTranslation(0, 0, 0);
+Tessellator tess = Tessellator.getInstance();
+VertexBuffer buffer = tess.getBuffer();
+
+buffer.setTranslation(x, y, z);
+buffer.begin(GL11.GL_QUADS, DefaultVertexFormats.POSITION_TEX);
+
+final float THRESHOLD = 1;
+float[][][] field = Blobs.fieldStrength(te.getBlobs());
+
+for (int i = 0; i < 16; i++)
+    for (int j = 0; j < 16; j++)
+        for (int k = 0; k < 16; k++)
+            if (field[i][j][k] >= THRESHOLD) { // Cell is in the blob
+                if (j == 15 || field[i][j + 1][k] < THRESHOLD) { // neighbour is outside (or at space bound)
+
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + i * iconSize, yMin + k * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + i * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + (i + 1) * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + (i + 1) * iconSize, yMin + k * iconSize).endVertex();
+
+                }
+
+                if (j == 0 || (int) field[i][j - 1][k] < THRESHOLD) {
+                    buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + i * iconSize, yMin + k * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).tex(xMin + i * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).tex(xMin + (i + 1) * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + (i + 1) * iconSize, yMin + k * iconSize).endVertex();
+                }
+
+                if (k == 15 || (int) field[i][j][k + 1] < THRESHOLD) {// FIXME tex coords
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + i * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + i * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + (i + 1) * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + (i + 1) * iconSize, yMin + j * iconSize).endVertex();
+
+                }
+                if (k == 0 || (int) field[i][j][k - 1] < THRESHOLD) {
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + i * iconSize, yMin + j * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).tex(xMin + i * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).tex(xMin + (i + 1) * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + (i + 1) * iconSize, yMin + j * iconSize).endVertex();
+                }
+
+                if (i == 15 || (int) field[i + 1][j][k] < THRESHOLD) {
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + k * iconSize, yMin + j * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + k * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).tex(xMin + (k + 1) * iconSize, yMin + (j + 1) * iconSize).endVertex();
+                    buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + (k + 1) * iconSize, yMin + j * iconSize).endVertex();
+
+                }
+
+                if (i == 0 || (int) field[i - 1][j][k] < THRESHOLD) {
+                    buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).tex(xMin + j * iconSize, yMin + k * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).tex(xMin + j * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).tex(xMin + (j + 1) * iconSize, yMin + (k + 1) * iconSize).endVertex();
+                    buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).tex(xMin + (j + 1) * iconSize, yMin + k * iconSize).endVertex();
+                }
+            }
+
+
+tess.draw();
+
+buffer.setTranslation(0, 0, 0);
+
 ```
+
 ## Animation
 As a last step we need to animate the blobs. I store a list of blobs in the TileEntity class of the Tank.
 In every tick/update I call the update function in the Blobs class for every charge:
 ```
-public void update(float speed) { if(this.x > maxX || this.x < minX) this.velX *= -1F; if(this.y > maxY || this.y < minY) this.velY *= -1F; if(this.z > maxZ || this.z < minZ) this.velZ *= -1F; this.x += speed * this.velX; this.y += speed * this.velY; this.z += speed * this.velZ; }
+public void update(float speed)
+{
+    if(this.x > maxX || this.x < minX)
+        this.velX *= -1F;
+
+    if(this.z > maxZ || this.z < minZ)
+        this.velZ *= -1F;
+
+    if(this.y > maxY || this.y < minY)
+        this.velY *= -1F;
+
+    this.x += speed * this.velX;
+    this.y += speed * this.velY;
+    this.z += speed * this.velZ;
+}
 ```
 This checks if a charge (centre of a blob) is colliding with the sides of our space. We will simulate perfectly elastic collisions, so we just need to multiply the respective velocity coordinate with -1.
 After that we update the position of the charge with its speed.
