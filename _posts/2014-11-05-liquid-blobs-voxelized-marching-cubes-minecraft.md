@@ -2,6 +2,9 @@
 title: "Liquid Blobs with Voxelized Marching Cubes in Minecraft"
 date: 2014-11-05
 ---
+Test latex
+$$a^2 + b^2 = c^2$$
+
 
 <img src="https://dawars.me/wp-content/uploads/2017/11/crafting_tank.png"/>
 
