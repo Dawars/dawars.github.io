@@ -6,7 +6,7 @@ layout: default
         <div class="col-md-8">
             <p id="breadcrumbs">
                 <span class="glyphicon glyphicon-home"></span>
-                <a href="https://wp-themes.com/" rel="home">Home</a>
+                <a href="/" rel="home">Home</a>
                 <span class="glyphicon glyphicon-chevron-right"></span>
                 <a href="#" rel="category">{{page.categories | first | capitalize}}
                 </a>
@@ -15,7 +15,7 @@ layout: default
                      class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake">
 
                 <h1 id="post-title">{{ page.title }}</h1>
-                {{ content | replace: '<!--more-->', '<a class="anchor" id="read-more" style="display: block; position: relative; top: -99px; visibility: hidden;"></a>' }}
+                {{ content | replace: '<!--more-->', '<a class="anchor" id="read-more" style="display: block; position: relative; top: -20px; visibility: hidden;"></a>' }}
 
                 <div class="post-meta clearfix ">
                     <p class="author-date">

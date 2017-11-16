@@ -29,7 +29,11 @@ Imagine placing _electrical charges_ into space. They will be at the center of o
 
 To get the surface of the metaballs, we must choose a threshold value. We want our surface to contain every point in space where the field strength is equal to our threshold. (this is called an isosurface).
 
-Mathematically speaking $$  \sum_{i=0}^{m} metaball_{i}(x, y, z) \leq threshold$$ where m is the number of charges/blobs, $$metaball_{i}(x, y, z)$$ computes the strength of the i-th charge at the location $$(x, y, z)$$ and threshold is an arbitrary value we choose.
+Mathematically speaking
+
+$$  \sum_{i=0}^{m} metaball_{i}(x, y, z) \leq threshold$$
+
+where m is the number of charges/blobs, $$metaball_{i}(x, y, z)$$ computes the strength of the i-th charge at the location $$(x, y, z)$$ and threshold is an arbitrary value we choose.
 
 The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. $$ metaball_{i}(x, y, z)=\frac{1}{(x-x_{i})^2+(y-y_{i})^2+(z-z_{i})^2} $$ where $$(x_{i}, y_{i}, z_{i})$$ is the position of the i-th charge
 
