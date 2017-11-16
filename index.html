@@ -3,11 +3,72 @@ layout: default
 title: Dawars' Blog
 ---
 <div id="content" class="container">
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
+    <div class="row" role="main">
+        <div class="col-md-8">
+            {% for post in paginator.posts %}
 
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+            <article id="post-25" class="post-25 post type-post status-publish format-standard has-post-thumbnail">
+                <!--<img width="750" height="571" src="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg" class="attachment-featured size-featured wp-post-image" alt="" srcset="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg 750w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-300x228.jpg 300w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-1024x780.jpg 1024w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle.jpg 1050w" sizes="(max-width: 750px) 100vw, 750px"> -->
+                <h3 class="post-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
+
+                {{ post.excerpt }}
+                {% capture content_words %}
+                {{ post.content | number_of_words }}
+                {% endcapture %}
+                {% capture excerpt_words %}
+                {{ post.excerpt | number_of_words }}
+                {% endcapture %}
+                {% if excerpt_words != content_words %}
+                <p><a class="btn btn-sm btn-primary" href="{{ post.url }}/#read-more" role="button">Read more >> <i
+                        class="fa fa-arrow-circle-right"></i></a>
+                </p>
+                {% endif %}
+
+                <div class="post-meta clearfix post-meta-list">
+                    <p class="author-date">
+                        <span class="glyphicon glyphicon-user"></span> Michael Burrows
+                        <span class="glyphicon glyphicon-calendar"></span>
+                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+                    </p>
+                    <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
+                        <!--TODO tags-->
+                        <a
+                                href="https://demo.wpmultiverse.com/franklin/tag/history/">history</a> <span
+                                class="slash"> / </span><a
+                                href="https://demo.wpmultiverse.com/franklin/tag/navy/">navy</a></p>
+
+                </div>
+
+
+                <div class="post-meta clearfix post-meta-list">
+                    <p class="author-date">
+                        <span class="glyphicon glyphicon-user"></span> Michael Burrows
+                        <span class="glyphicon glyphicon-calendar"></span> {{ post.date | date_to_string }}
+                    </p>
+                    <p class="post-tags"><span class="glyphicon glyphicon-tags"></span><a
+                            href="https://demo.wpmultiverse.com/franklin/tag/birds/">birds</a> <span
+                            class="slash"> / </span><a
+                            href="https://demo.wpmultiverse.com/franklin/tag/nature/">nature</a> <span
+                            class="slash"> / </span><a href="https://demo.wpmultiverse.com/franklin/tag/pelican/">pelican</a>
+                    </p>
+
+                </div>
+
+            </article>
+
+            {% endfor %} {% if paginator.total_pages > 1 %}
+            <ul class="pager">
+                {% if paginator.previous_page %}
+                <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous page</a>
+                </li>
+                {% endif %}
+                {% if paginator.next_page %}
+                <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next page &rarr;</a>
+                </li>
+                {% endif %}
+            </ul>
+            {% endif %}
+
+        </div>
+    </div>
 </div>

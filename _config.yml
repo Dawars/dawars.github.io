@@ -6,3 +6,5 @@ markdown: kramdown
 permalink: /:title/
 
 excerpt_separator: "<!--more-->"
+paginate: 10
+paginate_path: "/:num"
