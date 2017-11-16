@@ -1,8 +1,8 @@
 ---
 title: "A Design Overview of VR Titles"
 date: 2016-08-06
-categories: "Machine Learning"
-tags: Anime, Deep Learning
+categories: ["Machine Learning"]
+tags: ["Anime", "Deep Learning"]
 ---
 
 I’ve got access to an HTC Vive recently thanks to [Kibu](http://kibu.hu) and I spent my past few weeks playing most of the games available. In this post I’ll share what I’ve learned from playing these games and watching others play them. I’ll walk around the different design solutions in these games especially applied to the Vive.
@@ -101,7 +101,7 @@ My big question is whether ladders are working and if so how to implement them.
 
 ![Star Wars Lightsaber](/wp-content/uploads/2016/08/trials-of-tatooine-vr-lightsaber_700.jpg)
 
-This is a short experiment where you can “Repair the Millennium Falcon, defend it from attack by Imperial Stormtroopers, and wield a LIGHTSABER”. This leaves a big impression because it’s Star Wars otherwise it’s too short.
+This is a short experiment where you can "Repair the Millennium Falcon, defend it from attack by Imperial Stormtroopers, and wield a LIGHTSABER". This leaves a big impression because it’s Star Wars otherwise it’s too short.
 
 **\+ Lightsaber**: The lightsaber is really well made, when you swing it you feel as if it was the real thing. This is achieved with the combination of sound and force feedback.
 

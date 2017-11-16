@@ -1,7 +1,7 @@
 theme: default
 
 name: Dawars
-markdown: redcarpet
+markdown: kramdown
 
 permalink: /:title/
 

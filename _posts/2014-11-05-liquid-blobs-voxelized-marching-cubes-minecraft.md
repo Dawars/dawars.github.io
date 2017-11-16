@@ -1,8 +1,8 @@
 ---
 title: "Liquid Blobs with Voxelized Marching Cubes in Minecraft"
 date: 2014-11-05
-categories: Graphics
-tags: Minecraft
+categories: ["Graphics"]
+tags: ["Minecraft"]
 ---
 
 <img src="https://dawars.me/wp-content/uploads/2017/11/crafting_tank.png"/>
