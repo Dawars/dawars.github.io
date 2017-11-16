@@ -12,7 +12,7 @@ There is an ongoing debate about the definition of Anime.
 >The word **anime** (**アニメ**) comes from the abbreviated pronunciation of “animation” in Japanese, referring to all kinds of animation.
 
 Outside of Japan however, it is usually meant as animations exclusively created in Japan.
-
+<!--more-->
 ## Anime as an Art Form
 
 Films cannot be distinguished (and shouldn’t) based on the country of origin. Why couldn’t people outside of Japan produce _anime_ if they wanted to or why couldn’t Japanese make _cartoons_?
