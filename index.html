@@ -19,14 +19,14 @@ title: Dawars' Blog
                 {{ post.excerpt | number_of_words }}
                 {% endcapture %}
                 {% if excerpt_words != content_words %}
-                <p><a class="btn btn-sm btn-primary" href="{{ post.url }}/#read-more" role="button">Read more >> <i
+                <p><a class="btn btn-sm btn-primary" href="{{ post.url }}#read-more" role="button">Read more >> <i
                         class="fa fa-arrow-circle-right"></i></a>
                 </p>
                 {% endif %}
 
                 <div class="post-meta clearfix post-meta-list">
                     <p class="author-date">
-                        <span class="glyphicon glyphicon-user"></span> Michael Burrows
+                        <span class="glyphicon glyphicon-user"></span> Dawars
                         <span class="glyphicon glyphicon-calendar"></span>
                         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
                     </p>
@@ -36,21 +36,6 @@ title: Dawars' Blog
                                 href="https://demo.wpmultiverse.com/franklin/tag/history/">history</a> <span
                                 class="slash"> / </span><a
                                 href="https://demo.wpmultiverse.com/franklin/tag/navy/">navy</a></p>
-
-                </div>
-
-
-                <div class="post-meta clearfix post-meta-list">
-                    <p class="author-date">
-                        <span class="glyphicon glyphicon-user"></span> Michael Burrows
-                        <span class="glyphicon glyphicon-calendar"></span> {{ post.date | date_to_string }}
-                    </p>
-                    <p class="post-tags"><span class="glyphicon glyphicon-tags"></span><a
-                            href="https://demo.wpmultiverse.com/franklin/tag/birds/">birds</a> <span
-                            class="slash"> / </span><a
-                            href="https://demo.wpmultiverse.com/franklin/tag/nature/">nature</a> <span
-                            class="slash"> / </span><a href="https://demo.wpmultiverse.com/franklin/tag/pelican/">pelican</a>
-                    </p>
 
                 </div>
 
