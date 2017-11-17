@@ -1,8 +1,8 @@
 ---
 title: "A Design Overview of VR Titles"
 date: 2016-08-06
-categories: ["Machine Learning"]
-tags: ["Anime", "Deep Learning"]
+categories: ["Design"]
+tags: ["Virtual Reality"]
 ---
 
 I’ve got access to an HTC Vive recently thanks to [Kibu](http://kibu.hu) and I spent my past few weeks playing most of the games available. In this post I’ll share what I’ve learned from playing these games and watching others play them. I’ll walk around the different design solutions in these games especially applied to the Vive.
