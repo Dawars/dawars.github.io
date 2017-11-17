@@ -44,11 +44,11 @@ To get the surface of the metaballs, we must choose a threshold value. We want o
 
 Mathematically speaking
 
-$latex \sum\_{i=0}^m metaball\_{i}(x, y, z)\leq threshold &s=3$
+$$ \sum\_{i=0}^m metaball\_{i}(x, y, z)\leq threshold $$
 
-where _m_ is the number of charges/blobs, $latex metaball_{i}(x, y, z)$ computes the strength of the i-th charge at the location (x, y, z) and _threshold_ is an arbitrary value we choose.
+where _m_ is the number of charges/blobs, $$ metaball_{i}(x, y, z)$$ computes the strength of the i-th charge at the location $$(x, y, z)$$ and _threshold_ is an arbitrary value we choose.
 
-The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($latex metaball\_{i}(x, y, z)=\frac{1}{(x\_{i}-x)^2+(y\_{i}-y)^2+(z\_{i}-z)^2}$ where $latex (x\_{i}, y\_{i}, z_{i})$ is the position of the i-th charge)
+The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($$ metaball\_{i}(x, y, z)=\frac{1}{(x\_{i}-x)^2+(y\_{i}-y)^2+(z\_{i}-z)^2}$$ where $$ (x\_{i}, y\_{i}, z_{i})$$ is the position of the i-th charge)
 
 Hint: It might be interesting to play around with this function and see how the surface changes. Also try out a few different threshold values and see what works best.
 
