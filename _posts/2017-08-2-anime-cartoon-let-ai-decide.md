@@ -23,13 +23,22 @@ I consider anime an art form, and this art form isn’t restricted to one countr
 Sometimes it’s easy to tell, whether we see an anime or a cartoon, e.g. in the following example. Can you guess which one it is?
 
 ![Samurai Jack (Cartoon)](/wp-content/uploads/2017/08/samurai_jack.jpg)
-
+<p class="wp-caption-text">
+    Samurai Jack (Cartoon)
+  </p>
+  
 ![Sword of the Stranger (Anime)](/wp-content/uploads/2017/08/sword_of_the_stranger.png)
-
+<p class="wp-caption-text">
+    Sword of the Stranger (Anime)
+  </p>
+  
 So far, so good. But what about this one?
 
 ![Afro Samurai (?)](/wp-content/uploads/2017/08/afro_samurai.png)
-
+<p class="wp-caption-text">
+    Afro Samurai (?)
+  </p>
+  
 **Afro Samurai** was made in Japan but the creator (Takashi Okazaki) drew inspiration from _American media_ and their depiction of Japanese culture due to his fondness of hip hop and soul music.
 
 There are some animations, like this one, that cannot be simply put into either of the categories. As anime got popular world-wide, it influenced western animation studios and vice versa, like Disney, Pixar and DreamWorks amongst many others.
@@ -55,7 +64,11 @@ I’m utilizing Deep Learning, because it’s very good at recognizing and categ
 I will feed the AI generally acknowledged anime and cartoon images and it will learn the distinct characteristics of each…
 
 ![Application Concept](/wp-content/uploads/2017/08/anime_cartoon_mockup.png)
-
-I’m working on this project as part of my Lift residency at [KiBu](http://kibu.hu).
-
+<p class="wp-caption-text">
+    Application Concept
+  </p>
+  
+I’m working on this project as part of my _Lift residency_ at [KiBu](http://kibu.hu).
+If you want to get notified for new posts, follow me [here on Medium](https://medium.com/@Dawars) or on [Twitter](https://twitter.com/intent/follow?screen_name=Dawars00).
+      
 If you are interested in **Beta testing**, subscribe [here](https://goo.gl/forms/m7MqBNc4GfMPYFNf1).
