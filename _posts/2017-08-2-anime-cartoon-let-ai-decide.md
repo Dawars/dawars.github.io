@@ -3,6 +3,7 @@ title: "Anime or Cartoon? — Let the AI decide"
 date: 2017-08-02
 categories: ["Machine Learning"]
 tags: ["Anime", "Deep Learning"]
+author_name: Dawars
 ---
 
 ![](/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png)
