@@ -1,11 +1,8 @@
 ---
-id: 367
 title: Crowdsourcing Image Labeling for Anime and Cartoon Dataset
 date: 2017-09-01T20:54:23+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=367
-permalink: /index.php/2017/09/01/crowdsourcing-image-labeling/
 ---
 <img class="aligncenter size-medium" src="//dawars.me/wp-content/uploads/2017/07/fma_ed_text.png" width="1277" height="716" />
 

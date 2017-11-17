@@ -1,11 +1,8 @@
 ---
-id: 19
 title: OnePlus Loop VR headset
 date: 2016-06-13T12:26:50+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=19
-permalink: /index.php/2016/06/13/oneplus-loop-vr-headset/
 ---
 <div style="width: 3074px" class="wp-caption aligncenter">
   <a href="http://dawars.me/wp-content/uploads/2016/06/loop_front.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_front.jpg" alt="OnePlus Loop VR Headset" width="3064" height="1940" /></a>

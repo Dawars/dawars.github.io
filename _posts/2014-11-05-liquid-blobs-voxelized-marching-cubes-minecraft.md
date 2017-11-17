@@ -1,11 +1,8 @@
 ---
-id: 445
 title: Liquid Blobs with Voxelized Marching Cubes in Minecraft
 date: 2014-11-05T18:57:34+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=445
-permalink: /index.php/2014/11/05/liquid-blobs-voxelized-marching-cubes-minecraft/
 ---
 <img class="aligncenter" src="https://dawars.me/wp-content/uploads/2017/11/crafting_tank.png" alt="Crafting Pillar Tank with floating Metaballs" width="828" height="621" />
 

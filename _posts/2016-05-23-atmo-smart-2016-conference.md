@@ -1,11 +1,8 @@
 ---
-id: 205
 title: Atmo at SMART 2016 conference
 date: 2016-05-23T12:55:23+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=205
-permalink: /index.php/2016/05/23/atmo-smart-2016-conference/
 ---
 We got to showcase our project at SMART 2016. Because of space constraints we could only bring a camera to demonstrate the die tracking system but we recorded the animations and light effects  beforehand and played it on an adjacent TV when someone tossed the die.
 

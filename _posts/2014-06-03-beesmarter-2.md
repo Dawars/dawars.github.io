@@ -1,11 +1,8 @@
 ---
-id: 11
 title: 'BeeSmarter #2 (2014)'
 date: 2014-06-03T15:34:15+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=11
-permalink: /index.php/2014/06/03/beesmarter-2/
 ---
 <div id="attachment_45" style="width: 1034px" class="wp-caption aligncenter">
   <a style="line-height: 1.45em;" href="http://dawars.me/wp-content/uploads/2014/03/team.jpg"><img class="wp-image-45" style="font-size: 1rem; line-height: 1.5;" src="//dawars.me/wp-content/uploads/2014/03/team.jpg" alt="The Team at BeeSmarter" width="1024" height="683" /></a>

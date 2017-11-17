@@ -1,11 +1,8 @@
 ---
-id: 306
 title: 'Language Locker &#8211; Learn languages on the lockscreen'
 date: 2016-06-02T18:25:20+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=306
-permalink: /index.php/2016/06/02/language-locker/
 ---
 <div style="width: 1089px" class="wp-caption aligncenter">
   <a href="http://dawars.me/wp-content/uploads/2016/11/language_locker.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/language_locker.png" alt="Language learning on the lockscreen" width="1079" height="720" /></a>

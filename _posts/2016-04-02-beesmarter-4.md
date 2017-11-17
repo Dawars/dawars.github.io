@@ -1,11 +1,8 @@
 ---
-id: 72
 title: 'BeeSmarter #4 (2016) &#8211; The drone rush'
 date: 2016-04-02T08:56:46+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=72
-permalink: /index.php/2016/04/02/beesmarter-4/
 ---
 We participated in BeeSmarter the third time this year but now we changed category since we became university students. (Which is a mobile programming contest. If you haven&#8217;t checked out the previous ones: <a href="http://dawars.me/beesmarter-2/" target="_blank" rel="noopener">BeeSmarter #2</a>)
 

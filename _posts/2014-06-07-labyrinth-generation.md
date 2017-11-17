@@ -4,8 +4,6 @@ title: Labyrinth Generation
 date: 2014-06-07T15:58:20+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=14
-permalink: /index.php/2014/06/07/labyrinth-generation/
 ---
 <div style="width: 800px" class="wp-caption aligncenter">
   <a href="http://dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png" alt="Labyrinth" width="790" height="649" /></a>

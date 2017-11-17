@@ -1,11 +1,8 @@
 ---
-id: 238
 title: Neural Style transfer with Deep Learning
 date: 2016-11-25T14:36:07+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=238
-permalink: /index.php/2016/11/25/neural-style-transfer-deep-learning/
 ---
 Deep learning is currently a hot topic in Machine learning. The best way to illustrate this is probably through Neural Style Transfer. To get a better understanding of how this technique works I created a couple of images with the original code:
 

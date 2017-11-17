@@ -1,11 +1,8 @@
 ---
-id: 80
 title: 'Atmo &#8211; Interactive bubble for board games'
 date: 2016-07-10T18:06:30+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=80
-permalink: /index.php/2016/07/10/atmo-demo-day/
 ---
 <div style="width: 2058px" class="wp-caption aligncenter">
   <a href="http://dawars.me/wp-content/uploads/2016/07/atmo_demo_day.jpg"><img src="//dawars.me/wp-content/uploads/2016/07/atmo_demo_day.jpg" alt="Atmo at the Demo Day" width="2048" height="1367" /></a>

@@ -1,11 +1,8 @@
 ---
-id: 86
 title: 'The Elysium &#8211; The Story'
 date: 2015-11-05T20:41:47+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=86
-permalink: /index.php/2015/11/05/the-elysium-summary/
 ---
 ![](https://i.imgur.com/5TXF6TK.png)
 

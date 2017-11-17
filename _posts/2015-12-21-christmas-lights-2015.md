@@ -1,11 +1,8 @@
 ---
-id: 70
 title: Christmas Lights 2015
 date: 2015-12-21T08:55:41+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=70
-permalink: /index.php/2015/12/21/christmas-lights-2015/
 ---
 For this Christmas I came up with a neat little light effect which looks good under the tree.
 
