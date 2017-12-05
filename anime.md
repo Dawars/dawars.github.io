@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Anime or Cartoon?</title>
-  </head>
-  <body style="background: src('https://dawars.me/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png')">
-  
-  </body>
-</html>
+---
+title: Anime or Cartoon?
+date: 2017-12-05T15:28:37+00:00
+author: dawars
+layout: page
+---
+<img src="https://dawars.me/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png" />
