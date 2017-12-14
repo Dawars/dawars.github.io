@@ -48,7 +48,7 @@ $$  \sum_{i=0}^{m} metaball_{i}(x, y, z) \leq threshold$$
 
 where _m_ is the number of charges/blobs, $$metaball_{i}(x, y, z)$$ computes the strength of the i-th charge at the location $$(x, y, z)$$ and _threshold_ is an arbitrary value we choose.
 
-The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($$ metaball_{i}(x, y, z)=\frac{1}{(x-x_{i})^2+(y-y_{i})^2+(z-z_{i})^2} where $$(x_{i}, y_{i}, z_{i})$$ is the position of the i-th charge)
+The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($$ metaball_{i}(x, y, z)=\frac{1}{(x-x_{i})^2+(y-y_{i})^2+(z-z_{i})^2} where $$ (x_{i}, y_{i}, z_{i})$$ is the position of the i-th charge)
 
 Hint: It might be interesting to play around with this function and see how the surface changes. Also try out a few different threshold values and see what works best.
 
