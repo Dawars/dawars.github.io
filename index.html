@@ -31,8 +31,7 @@ title: Dawars' Blog
                         <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
                     </p>
                     <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
-                        <!--TODO tags-->
-                        {% for tag in page.tags %}
+                        {% for tag in post.tags %}
                         {% capture tag_name %}{{ tag }}{% endcapture %}
                         <a href="/tag/{{ tag_name }}/">{{ tag_name }}</a> <span class="slash"> / </span>
                         {% endfor %}
