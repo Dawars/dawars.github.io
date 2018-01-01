@@ -32,13 +32,10 @@ title: Dawars' Blog
                     </p>
                     <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
                         <!--TODO tags-->
-                        {{page.tags | capitalize | join: '/ '}}
-
-                        <a
-                                href="https://demo.wpmultiverse.com/franklin/tag/history/">history</a> <span
-                                class="slash"> / </span><a
-                                href="https://demo.wpmultiverse.com/franklin/tag/navy/">navy</a></p>
-
+                        {% for tag in page.tags %}
+                        {% capture tag_name %}{{ tag }}{% endcapture %}
+                        <a href="/tag/{{ tag_name }}/">{{ tag_name }}</a> <span class="slash"> / </span>
+                        {% endfor %}
                 </div>
 
             </article>
@@ -46,11 +43,14 @@ title: Dawars' Blog
             {% endfor %} {% if paginator.total_pages > 1 %}
             <ul class="pager">
                 {% if paginator.previous_page %}
-                <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous page</a>
+                <li class="previous"><a
+                        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+                    Previous page</a>
                 </li>
                 {% endif %}
                 {% if paginator.next_page %}
-                <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next page &rarr;</a>
+                <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next
+                    page &rarr;</a>
                 </li>
                 {% endif %}
             </ul>
