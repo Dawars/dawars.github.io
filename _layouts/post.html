@@ -23,11 +23,10 @@ layout: default
                         <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date_to_string }}
                     </p>
                     <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
-                        {{page.tags | capitalize | join: ', '}}
-                        <!--
-                        <a href="https://wp-themes.com/?tag=boat">boat</a> <span class="slash"> / </span>
-                        <a href="https://wp-themes.com/?tag=lake">lake</a> <span class="slash"> / </span>
-                        -->
+                        {% for tag in page.tags %}
+                        {% capture tag_name %}{{ tag }}{% endcapture %}
+                        <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> <span class="slash"> / </span>
+                        {% endfor %}
                     </p>
 
 
