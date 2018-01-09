@@ -28,6 +28,7 @@ One has to point the mobile at the analysed image and at the top of the screen t
 ## How does it work
 
 The app takes advantage of the superhuman capabilities of neural networks in computer vision, especially CNNs (convolutional neural network).
+![](/wp-content/uploads/2018/01/deep_learning_training.png)
 
 The network is trained on hundreds of thousands of images from both anime and cartoon images. Here I would like to stress that only universally accepted animations go into either categories, e.g. Avatar: The Last Airbender is excluded.
 
@@ -42,8 +43,12 @@ The current beta utilizes the [Mobilenet](https://arxiv.org/abs/1704.04861) arch
 
 Currently the app does a good job at recognising and distinguishing between anime and cartoon images. A current limitation is that it can only say something is either anime or cartoon but not both (a mix of them) or neither.
 
-I'm planning to teach an even bigger Neural Network (VGG-16) with this dataset. VGG-16 is well known for its great performance in Style Transfer.
+I'm planning to train an even bigger Neural Network (VGG-16) on this dataset. VGG-16 is well known for its great performance in Style Transfer.
 
 Using a slightly modified version of [Neural Style Transfer](https://github.com/jcjohnson/neural-style) we could get a glimpse of the inner workings of the network.
 
 My hyphothesis is that if we tell the network to make a cartoon image more anime looking, certain features will appear that the network associates with anime and vice versa.
+
+![](/wp-content/uploads/2018/01/kibu_logo.png)
+![](/wp-content/uploads/2018/01/ntp_logo.png)
+
