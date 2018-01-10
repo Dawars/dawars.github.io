@@ -40,7 +40,7 @@ The algorithm extracts the style from the lower layers (edges, curves) and the c
 
 ## Deep Dream
 
-Deep Dream is achieved by maximizing activations in a specific layer or neuron, for example if an activation represents how likely is it that the image contains a dog, maximizing it will start to form dogs on the picture. Of course the effect can be so little that humans can&#8217;t recognise the dogs only the network can. Octaves solves this problem but the existing network is so much different that it would be really hard to implement and it would slow down the process even more.
+Deep Dream is achieved by maximizing activations in a specific layer or neuron, for example if an activation represents how likely is it that the image contains a dog, maximizing it will start to form dogs on the picture. Of course the effect can be so little that humans can&#8217;t recognise the dogs, only the network can. Octaves solves this problem but the existing network is so different that it would be really hard to implement and it would slow down the process even more.
 
 What we do however is find layers or neurons which are not used in the style and content transfer and maximize the activations there. This way the optimizer will not &#8220;fix&#8221; deep dream by making style or content more accurate.
 
