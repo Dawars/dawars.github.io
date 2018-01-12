@@ -16,9 +16,8 @@ title: Dawars' Blog
     {{ post.excerpt | number_of_words }}
     {% endcapture %}
     {% if excerpt_words != content_words %}
-    <p><a class="btn btn-sm btn-primary" href="{{ post.url }}#read-more" role="button">Read more >> <i
-            class="fa fa-arrow-circle-right"></i></a>
-    </p>
+    <p> <a href="{{ post.url }}#read-more" class="more-link">Continue Reading <span>&rarr;</span></a></p>
+
     {% endif %}
 
     <div class="post-meta clearfix post-meta-list">

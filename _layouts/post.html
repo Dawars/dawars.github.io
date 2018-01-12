@@ -1,45 +1,39 @@
 ---
 layout: default
 ---
-<div id="content" class="container">
-    <div class="row" role="main">
-        <div class="col-md-8">
-            <p id="breadcrumbs">
-                <span class="glyphicon glyphicon-home"></span>
-                <a href="/" rel="home">Home</a>
-                <span class="glyphicon glyphicon-chevron-right"></span>
-                <a href="#" rel="category">{{page.categories | first | capitalize}}
-                </a>
-                <span class="glyphicon glyphicon-chevron-right"></span>{{ page.title }}</p>
-            <article id="post-19"
-                     class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake">
+<p id="breadcrumbs">
+    <span class="glyphicon glyphicon-home"></span>
+    <a href="/" rel="home">Home</a>
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <a href="#" rel="category">{{page.categories | first | capitalize}}
+    </a>
+    <span class="glyphicon glyphicon-chevron-right"></span>{{ page.title }}</p>
+<article id="post-19"
+         class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake">
 
-                <h1 id="post-title">{{ page.title }}</h1>
-                {{ content | replace: '<!--more-->', '<a class="anchor" id="read-more" style="display: block; position: relative; top: -20px; visibility: hidden;"></a>' }}
+    <h1 id="post-title">{{ page.title }}</h1>
+    {{ content | replace: '<!--more--> ', '<a class="anchor" id="read-more"
+                                              style="display: block; position: relative; top: -20px; visibility: hidden;"></a>'
+    }}
 
-                <div class="post-meta clearfix ">
-                    <p class="author-date">
-                        <span class="glyphicon glyphicon-user"></span> {{page.author}}
-                        <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date_to_string }}
-                    </p>
-                    <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
-                        {% for tag in page.tags %}
-                        {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> <span class="slash"> / </span>
-                        {% endfor %}
-                    </p>
-
-
-                </div>
+    <div class="post-meta clearfix ">
+        <p class="author-date">
+            <span class="glyphicon glyphicon-user"></span> {{page.author}}
+            <span class="glyphicon glyphicon-calendar"></span> {{ page.date | date_to_string }}
+        </p>
+        <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
+            {% for tag in page.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            <a href="/tag/{{ tag_name }}">{{ tag_name }}</a> <span class="slash"> / </span>
+            {% endfor %}
+        </p>
 
 
-            </article>
-            <hr class="post-divider">
-        </div>
-        <div id="primary-sidebar" class="col-md-4">
-        </div>
     </div>
-</div>
+
+
+</article>
+<hr class="post-divider">
 
 <script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
