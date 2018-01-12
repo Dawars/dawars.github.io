@@ -239,11 +239,11 @@
 .et_monarch .widget_monarchwidget li.et_social_spotify { background-color: #aecf29 !important; }
 .et_monarch .widget_monarchwidget li.et_social_spotify:hover, .et_monarch .widget_monarchwidget .et_social_circle li.et_social_spotify:hover i { background-color: #94b023 !important; }
 
-.et_monarch .et_social_instagram, .et_monarch .et_social_networks.et_social_circle .et_social_instagram i { background-color: #d4328b; }
-.et_monarch li.et_social_instagram:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_instagram:hover i { background-color: #ad33b2; }
-.et_monarch .et_social_sidebar_border li.et_social_instagram:hover, .et_monarch .et_social_sidebar_networks_right.et_social_sidebar_border li.et_social_instagram:hover { border-color: #d4328b; }
-.et_monarch .widget_monarchwidget li.et_social_instagram { background-color: #d4328b !important; }
-.et_monarch .widget_monarchwidget li.et_social_instagram:hover, .et_monarch .widget_monarchwidget .et_social_circle li.et_social_instagram:hover i { background-color: #ad33b2 !important; }
+.et_monarch .et_social_instagram, .et_monarch .et_social_networks.et_social_circle .et_social_instagram i { background-color: #e4405f; }
+.et_monarch li.et_social_instagram:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_instagram:hover i { background-color: #cb3d5c; }
+.et_monarch .et_social_sidebar_border li.et_social_instagram:hover, .et_monarch .et_social_sidebar_networks_right.et_social_sidebar_border li.et_social_instagram:hover { border-color: #e4405f; }
+.et_monarch .widget_monarchwidget li.et_social_instagram { background-color: #e4405f !important; }
+.et_monarch .widget_monarchwidget li.et_social_instagram:hover, .et_monarch .widget_monarchwidget .et_social_circle li.et_social_instagram:hover i { background-color: #cb3d5c !important; }
 
 .et_monarch .et_social_myspace, .et_monarch .et_social_networks.et_social_circle .et_social_myspace i { background-color: #3a5998; }
 .et_monarch li.et_social_myspace:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_myspace:hover i { background-color: #314c81; }
