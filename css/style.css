@@ -10,7 +10,7 @@ License: GNU General Public License v3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html 
 Franklin WordPress Theme, Copyright 2014 wpmultiverse.com
 Franklin WordPress Theme is distributed under the terms of the GNU GPL
-*/ 
+*/
 
 body {font-family:'Source Sans Pro',sans-serif; color:#555; background-color:#f9f9f9; line-height:1.6em;}
 a {color:#2D3642;}
@@ -18,7 +18,7 @@ a:hover {text-decoration:none; color:#20b2aa;}
 
 /* ----- header ----- */
 header {background-color:#20b2aa; margin-bottom:40px;}
-#top-bar {background-color:#2d3642; color:#aaa; padding-bottom:15px;}
+#top-bar {display:none;/*Added by Dawars: remove top bar*/ background-color:#2d3642; color:#aaa; padding-bottom:15px;}
 #top-bar p {float:left; margin:17px 15px 0 0; font-style:italic;}
 #top-bar a {font-size:13px; color:#aaa; border-bottom:1px dotted #555;}
 #top-bar a:hover {color:#fff;}
@@ -100,15 +100,15 @@ footer {border-top:1px solid #f0f0f0; background-color:#fff;}
 #breadcrumbs .glyphicon {font-size:9px; position:relative; top:0; color:#dcdcdc;}
 #breadcrumbs .glyphicon-home {margin-right:8px; color:#ccc;}
 #breadcrumbs .glyphicon-chevron-right {margin:0 8px;}
-article {font-size:18px;}
+article {font-size:18px; word-wrap: break-word/*Dawars, break long links in articles*/}
 article img, .widget img {display:inline-block; height:auto; max-width:100%; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
 article #post-title, .post-title {font-family:'Open Sans',sans-serif; font-weight:600; font-size:36px; line-height:1.1em; margin-top:0; color:#333;}
 article h1, article h2, article h3, article h4, article h5, article h6 {font-family:'Open Sans',sans-serif; font-weight:600; margin-bottom:30px;}
-article h2 {font-size:28px}
-article h3 {font-size:25px;}
-article h4 {font-size:23px;}
-article h5 {font-size:21px;}
-article h6 {font-size:18px;}
+article h2 {font-size:28px;line-height:1.3em}
+article h3 {font-size:25px;line-height:1.3em}
+article h4 {font-size:23px}
+article h5 {font-size:21px}
+article h6 {font-size:18px}
 article p {margin-bottom:30px; line-height:1.45em;}
 article p cite {font-style:italic;}
 article ul {margin-bottom:30px; padding:0;}
@@ -162,7 +162,7 @@ article dd {margin:0 0 15px 0;}
 .post-divider {border-width:3px; border-color:#eee; width:33%; margin:80px auto; clear:both;}
 .page-links {text-align:center; color:#777; margin-bottom:30px;}
 .page-links .page-numbers {background-color:#f7f7f7; border:1px solid #eee; padding:3px 10px; margin-right:4px; color:#777; font-size:18px;}
-.page-links .current {text-decoration:underline;} 
+.page-links .current {text-decoration:underline;}
 
 /* ----- posts loop ----- */
 .post-title a {border:0;}
@@ -194,29 +194,46 @@ input[type=submit], input[type=reset] {background-color:#555; color:#fff; border
 .post-password-form input[type=password] {width:30%;}
 
 /* ----- media queries ----- */
-@media(max-width:1200px) {	
-	#top-bar ul {float:left; padding:0;}	
-	#logo {margin-bottom:20px;}		
+@media(max-width:1200px) {
+	#top-bar ul {float:left; padding:0;}
+	#logo {margin-bottom:20px;}
 	#primary-menu ul {float:left;}
 	#footer-credit p {font-size:12px;}
 }
-@media(max-width:992px) {		
+@media(max-width:992px) {
 	#primary-menu li {float:left; margin-right:10px; list-style:none; padding:0 8px 2px 8px; border:1px solid #fff; -webkit-border-radius:3px; -moz-border-radius:3px; border-radius:3px;}
 	#primary-menu li a {color:#fff; font-size:13px;}
 	#footer-meta p {float:none;}
-	#footer-credit {text-align:left;}	
+	#footer-credit {text-align:left;}
 }
-@media(max-width:768px) {	
+@media(max-width:768px) {
+	#top-bar {display: none;}
 	#content {margin-bottom:0; border-radius:0;}
 	header {margin-bottom:0;}
-	#header-search {float:left; margin:15px 15px 0 0;}	
+	#header-search {float:left; margin:15px 15px 0 0;}
 	#bot-bar {padding-bottom:0;}
-	#bot-bar .row {margin:0;}	
+	#bot-bar .row {margin:0;}
 	#bot-bar .navbar-collapse {width:100%; padding:10px 0;}
 	#logo img {margin-bottom:30px; max-height:45px;}
 	#primary-menu ul {float:none;}
-	#primary-menu {margin-top:25px;}	
+	#primary-menu {margin-top:25px;}
 	#primary-menu li {display:block; width:100%; border:0; border-bottom:1px solid #fff; padding:8px 0 8px 15px; -webkit-border-radius:0; -moz-border-radius:0; border-radius:0;}
 	.author-date {width:100%;}
-	.post-tags {float:left; width:100%; text-align:left;}			
+	.post-tags {float:left; width:100%; text-align:left;}
+}
+/* Added by Dawars: embedded videos */
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px; height: 0; overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
