@@ -6,7 +6,7 @@ author: dawars
 layout: post
 ---
 <div style="width: 800px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png" alt="Labyrinth" width="790" height="649" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png" alt="Labyrinth" width="790" height="649" /></a>
   
   <p class="wp-caption-text">
     Randomly generated labyrinth in Minecraft
@@ -242,7 +242,7 @@ Here are some pictures of the results in Minecraft.
 It turned out to make you feel truly lost and mad (so goal accomplished 🙂 ). <span style="line-height: 1.45em;">If you would like to try it yourself you can </span><a style="line-height: 1.45em;" href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2295305-the-elysium-a-greek-themed-dimension-for-heroes" target="_blank">download it here</a><span style="line-height: 1.45em;">.</span>
 
 <div style="width: 800px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2014/07/2014-07-07_18.58.13-1024x542.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_18.58.13-1024x542.png" alt="First Person View of the labyrinth" width="790" height="418" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2014/07/2014-07-07_18.58.13-1024x542.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_18.58.13-1024x542.png" alt="First Person View of the labyrinth" width="790" height="418" /></a>
   
   <p class="wp-caption-text">
     First Person View
@@ -250,7 +250,7 @@ It turned out to make you feel truly lost and mad (so goal accomplished 🙂 ).
 </div>
 
 <div style="width: 800px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png" alt="Top-down view of the labyrinth" width="790" height="649" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png"><img src="//dawars.me/wp-content/uploads/2014/07/2014-07-07_21.45.00-1024x842.png" alt="Top-down view of the labyrinth" width="790" height="649" /></a>
   
   <p class="wp-caption-text">
     Top-down view

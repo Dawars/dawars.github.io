@@ -4,13 +4,13 @@ title: 11. Canvas és rajzolás a képernyőre
 date: 2016-12-10T17:47:51+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=332
+guid: https://dawars.me/?p=332
 permalink: /index.php/2016/12/10/11-canvas-es-rajzolas-kepernyore/
 ---
 A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
 
 <div style="width: 235px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/12/canvas_draw.png"><img class="" src="//dawars.me/wp-content/uploads/2016/12/canvas_draw.png" alt="Rajzolás Canvasra" width="225" height="400" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/12/canvas_draw.png"><img class="" src="//dawars.me/wp-content/uploads/2016/12/canvas_draw.png" alt="Rajzolás Canvasra" width="225" height="400" /></a>
   
   <p class="wp-caption-text">
     Rajzolás Canvasra
@@ -24,7 +24,7 @@ A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
 Ahhoz, hogy a képernyőre rajzolhassunk, szükségünk lesz egy saját View classra (mint pl a Button vagy a TextView). A _SurfaceView _biztosítja nekünk a hozzáférést a View Canvas objektumához, amit aztán az Android megjelenít az Activity-ben a View helyén. Ezért ezt az osztályt kiegészítjük (extend) és csinálunk egy MyView class-t.
 
 <div style="width: 331px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/12/canvas_layout.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/12/canvas_layout.png" alt="Layout" width="321" height="539" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/12/canvas_layout.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/12/canvas_layout.png" alt="Layout" width="321" height="539" /></a>
   
   <p class="wp-caption-text">
     Layout
@@ -40,7 +40,7 @@ Az Android keretrendszer biztosít nekünk függvényeket és classokat a rajzol
 Egy canvas objektumon meghívhatunk különböző _draw_ függvényeket, pl drawCircle, drawRectangle, drawLine, drawColor.
 
 <div style="width: 1157px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/12/view_coord_sys.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/12/view_coord_sys.png" alt="Koordináta rendszer" width="1147" height="564" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/12/view_coord_sys.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/12/view_coord_sys.png" alt="Koordináta rendszer" width="1147" height="564" /></a>
   
   <p class="wp-caption-text">
     Koordináta rendszer

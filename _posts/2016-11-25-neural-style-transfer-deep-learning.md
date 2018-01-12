@@ -7,7 +7,7 @@ layout: post
 Deep learning is currently a hot topic in Machine learning. The best way to illustrate this is probably through Neural Style Transfer. To get a better understanding of how this technique works I created a couple of images with the original code:
 
 <div style="width: 522px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-epilogue.jpg"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-epilogue.jpg" alt="Golden bridge with the style of a snowy scene from Kara no Kyoukai - The Garden of Sinner" width="512" height="383" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-epilogue.jpg"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-epilogue.jpg" alt="Golden bridge with the style of a snowy scene from Kara no Kyoukai - The Garden of Sinner" width="512" height="383" /></a>
   
   <p class="wp-caption-text">
     Golden bridge with the style of a snowy scene from Kara no Kyoukai &#8211; The Garden of Sinner
@@ -15,7 +15,7 @@ Deep learning is currently a hot topic in Machine learning. The best way to illu
 </div>
 
 <div style="width: 522px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-paradox-spiral.jpg"><img src="//dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-paradox-spiral.jpg" alt="Golden bridge with the style of an apocalyptic scene from the same anime" width="512" height="383" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-paradox-spiral.jpg"><img src="//dawars.me/wp-content/uploads/2016/11/golden_gate-kara-no-kyoukai-the-garden-of-sinners-paradox-spiral.jpg" alt="Golden bridge with the style of an apocalyptic scene from the same anime" width="512" height="383" /></a>
   
   <p class="wp-caption-text">
     Golden bridge with the style of an apocalyptic scene from the same anime
@@ -24,7 +24,7 @@ Deep learning is currently a hot topic in Machine learning. The best way to illu
 
 <!--more-->
 
-After working on computer vision problems for [Atmo](http://dawars.me/atmo-demo-day/) I came across Deep Learning, especially Convolutional Neural Networks (CNN). Since I purchased a GTX 970 graphics card for my VR project I had everything needed to start in the world of Deep Learning. After finishing the <a href="https://www.udacity.com/course/deep-learning--ud730" target="_blank">Deep Learning</a> course at Udacity I decided to take the optional class named _Practical Deep Learning in Python and Lua_ at BME.
+After working on computer vision problems for [Atmo](https://dawars.me/atmo-demo-day/) I came across Deep Learning, especially Convolutional Neural Networks (CNN). Since I purchased a GTX 970 graphics card for my VR project I had everything needed to start in the world of Deep Learning. After finishing the <a href="https://www.udacity.com/course/deep-learning--ud730" target="_blank">Deep Learning</a> course at Udacity I decided to take the optional class named _Practical Deep Learning in Python and Lua_ at BME.
 
 There I joined a team that were looking into Neural Style Transfer. We started out with a <a href="https://github.com/cysmith/neural-style-tf" target="_blank">Tensorflow implementation</a> of the research <a href="https://arxiv.org/abs/1508.06576v2" target="_blank">A Neural Algorithm of Artistic Style</a>. The goal was to get a deep understanding of how neural networks work so we decided to add deep dream and replace the underlying network.
 
@@ -47,7 +47,7 @@ What we do however is find layers or neurons which are not used in the style and
 With this method we achieved the followings:
 
 <div style="width: 522px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/11/golden_bridge-deep_dream.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/golden_bridge-deep_dream.png" alt="Maximizing activations in one layer after 1000 epochs" width="512" height="383" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/11/golden_bridge-deep_dream.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/golden_bridge-deep_dream.png" alt="Maximizing activations in one layer after 1000 epochs" width="512" height="383" /></a>
   
   <p class="wp-caption-text">
     Maximizing activations in one layer after 1000 epochs
@@ -55,7 +55,7 @@ With this method we achieved the followings:
 </div>
 
 <div style="width: 522px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png" alt="Deep dream causes to change the brush strokes but not the whole style or content" width="512" height="383" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png" alt="Deep dream causes to change the brush strokes but not the whole style or content" width="512" height="383" /></a>
   
   <p class="wp-caption-text">
     Deep dream causes to change the brush strokes but not the whole style or content
@@ -75,7 +75,7 @@ This _might_ increase the quality a little bit but it is a good way to learn 
 My idea was to use SqueezeNet since it has a very small size (4.8MB) compared to the original VGG-19 (510MB) which the default implementation uses. This means a significantly lower number of operations per epoch.
 
 <div style="width: 619px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/11/squeezenet_arch.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/squeezenet_arch.png" alt="Architecture of SquezeNet" width="609" height="427" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/11/squeezenet_arch.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/squeezenet_arch.png" alt="Architecture of SquezeNet" width="609" height="427" /></a>
   
   <p class="wp-caption-text">
     Architecture of SquezeNet

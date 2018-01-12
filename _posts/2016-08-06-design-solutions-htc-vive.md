@@ -5,7 +5,7 @@ categories: ["Design"]
 tags: ["Virtual Reality"]
 author: dawars
 ---
-
+![](https://cdn-images-1.medium.com/max/2000/0*-KA12ny71u2UxjIO.jpeg)
 I’ve got access to an HTC Vive recently thanks to [Kibu](http://kibu.hu) and I spent my past few weeks playing most of the games available. In this post I’ll share what I’ve learned from playing these games and watching others play them. I’ll walk around the different design solutions in these games especially applied to the Vive.
 
 <!--more-->

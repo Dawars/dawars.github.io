@@ -130,7 +130,7 @@ float[][][] field = Blobs.fieldStrength(te.getBlobs());
 
 for (int i = 0; i < 16; i++)
     for (int j = 0; j < 16; j++)
-        for (int k = 0; k < 16; k++) if (field[i][j][k] &gt;= THRESHOLD) { // Cell is in the blob
+        for (int k = 0; k < 16; k++) if (field[i][j][k] >= THRESHOLD) { // Cell is in the blob
                 if (j == 15 || field[i][j + 1][k] < THRESHOLD) { // neighbour is outside (or at space bound)
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
@@ -190,11 +190,11 @@ In every tick/update I call the update function in the Blobs class for every cha
 ```java
 public void update(float speed)
 {
-    if(this.x &gt; maxX || this.x < minX)
+    if(this.x > maxX || this.x < minX)
         this.velX *= -1F;
-    if(this.y &gt; maxY || this.y < minY) 
+    if(this.y > maxY || this.y < minY)
         this.velY *= -1F; 
-    if(this.z &gt; maxZ || this.z < minZ)
+    if(this.z > maxZ || this.z < minZ)
         this.velZ *= -1F;
 
     this.x += speed * this.velX;

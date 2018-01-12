@@ -5,7 +5,7 @@ author: dawars
 layout: post
 ---
 <div style="width: 3074px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2016/06/loop_front.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_front.jpg" alt="OnePlus Loop VR Headset" width="3064" height="1940" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/06/loop_front.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_front.jpg" alt="OnePlus Loop VR Headset" width="3064" height="1940" /></a>
   
   <p class="wp-caption-text">
     OnePlus Loop
@@ -20,12 +20,10 @@ When I realized my mistake, it was long over. Fortunately for me I reverse engin
 
 <!--more-->
 
-## 
-
 ## Packaging
 
 <div style="width: 383px" class="wp-caption alignleft">
-  <a href="http://dawars.me/wp-content/uploads/2016/06/loop_box.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_box.jpg" alt="White box of the OnePlus Loop" width="373" height="276" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/06/loop_box.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_box.jpg" alt="White box of the OnePlus Loop" width="373" height="276" /></a>
   
   <p class="wp-caption-text">
     OnePlus Loop Packaging
@@ -47,7 +45,7 @@ They even included a _lens cleaning cloth _which is a nice touch since these l
 ## The headset
 
 <div style="width: 367px" class="wp-caption alignright">
-  <a href="http://dawars.me/wp-content/uploads/2016/06/loop_side.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_side.jpg" alt="OnePlus Loop VR Headset" width="357" height="261" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2016/06/loop_side.jpg"><img src="//dawars.me/wp-content/uploads/2016/06/loop_side.jpg" alt="OnePlus Loop VR Headset" width="357" height="261" /></a>
   
   <p class="wp-caption-text">
     OnePlus Loop VR Headset
@@ -72,7 +70,7 @@ Apart from that here are a few things to note:
 
   * It is very comfortable to wear, except at the nose part, where there is no foam. It presses my nose a little too hard but I think I can get used to it.
   * The loop itself has a gorgeous design and a sturdy build. It&#8217;s a lot more massive than a cheap Google Cardboard which given the production cost is no surprise.
-  * The lenses are good, it gives a clean and crispy image with my phones&#8217; display. (<del>the pixels are still visible which I generally dislike about VR</del> never mind)
+  * The lenses are good, it gives a clean and crispy image with my phones&#8217; display. (<del>the pixels are still visible which I generally dislike about VR</del> it's easy to get used to)
   * The only real disadvantage is the lack of a button which is probably not needed for the lauch event but it makes it practically impossible to play any games with it. (A workaround is to use a Bluetooth controller)
 
 ## Final words

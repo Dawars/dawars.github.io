@@ -4,7 +4,7 @@ title: '7-8.  Osztályok, inheritance'
 date: 2016-11-18T11:45:34+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=320
+guid: https://dawars.me/?p=320
 permalink: /index.php/2016/11/18/7-8-osztalyok-inheritance/
 ---
 Ezen a két szakkörön megismerkedtünk az objektumorienált programozás alapjaival (OOP). Az osztályokkal, scope-okkal és a származtatással.

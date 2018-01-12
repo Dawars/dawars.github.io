@@ -47,7 +47,7 @@ I'm planning to train an even bigger Neural Network (VGG-16) on this dataset. VG
 
 Using a slightly modified version of [Neural Style Transfer](https://github.com/jcjohnson/neural-style) we could get a glimpse of the inner workings of the network.
 
-My hyphothesis is that if we tell the network to make a cartoon image more anime looking, certain features will appear that the network associates with anime and vice versa.
+My hypothesis is that if we tell the network to make a cartoon image more anime looking, certain features will appear that the network associates with anime and vice versa.
 
 ![](/wp-content/uploads/2018/01/kibu_logo.png)
 ![](/wp-content/uploads/2018/01/ntp_logo.png)

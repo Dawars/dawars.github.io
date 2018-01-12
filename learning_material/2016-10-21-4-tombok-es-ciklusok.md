@@ -4,7 +4,7 @@ title: 4. Tömbök és ciklusok gyakorlása
 date: 2016-10-21T22:50:25+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=256
+guid: https://dawars.me/?p=256
 permalink: /index.php/2016/10/21/4-tombok-es-ciklusok/
 ---
 ## Stringek
@@ -89,7 +89,7 @@ UtasításN;
 
 Ezt folyamdiagrammal így lehetne szemléltetni:
   
-[<img class="aligncenter" src="//dawars.me/wp-content/uploads/2016/10/4_while_loop.png" alt="" width="355" height="319" />](http://dawars.me/wp-content/uploads/2016/10/4_while_loop.png)
+[<img class="aligncenter" src="//dawars.me/wp-content/uploads/2016/10/4_while_loop.png" alt="" width="355" height="319" />](https://dawars.me/wp-content/uploads/2016/10/4_while_loop.png)
 
 ![Demonstration of how a while loop works in Python](https://blog.penjee.com/wp-content/uploads/2015/04/top-5-programming-animated-gifs_demonstration-of-while-loop-animation_logo.gif)
 
@@ -109,7 +109,7 @@ UtasításN;
   
 [/code]
 
-[<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png" alt="" width="355" height="335" />](http://dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png)
+[<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png" alt="" width="355" height="335" />](https://dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png)
 
 ## For ciklus
 
@@ -135,7 +135,7 @@ UtasításN;
   
 [/code]
 
-[<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_for_loop.png" alt="" width="355" height="349" />](http://dawars.me/wp-content/uploads/2016/10/4_for_loop.png)
+[<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_for_loop.png" alt="" width="355" height="349" />](https://dawars.me/wp-content/uploads/2016/10/4_for_loop.png)
 
 Gyakran előfordul, hogy végig szeretnénk menni egy tömb összes elemén és műveleteket végezni rajtuk (ezért is használunk ilyenkor tömböt).
 

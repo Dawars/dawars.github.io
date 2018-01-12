@@ -4,7 +4,7 @@ title: 'Anime or Cartoon? &#8211; Let the AI decide'
 date: 2017-08-03T18:09:11+00:00
 author: dawars
 layout: post
-guid: http://dawars.me/?p=415
+guid: https://dawars.me/?p=415
 permalink: /index.php/2017/08/03/anime-cartoon-let-ai-decide/
 ---
 <footer><img class="aligncenter size-medium" src="//dawars.me/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png" alt="Anime or Cartoon? Edward from Fullmetal Alchemist and Aang from Avatar" width="1920" height="1080" /></p> 
@@ -38,7 +38,7 @@ Outside of Japan however, it is usually meant as animations exclusively create
 </p>
 
 <div style="width: 680px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2017/08/samurai_jack.jpg"><img src="//dawars.me/wp-content/uploads/2017/08/samurai_jack.jpg" alt="Samurai Jack (Cartoon)" width="670" height="455" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2017/08/samurai_jack.jpg"><img src="//dawars.me/wp-content/uploads/2017/08/samurai_jack.jpg" alt="Samurai Jack (Cartoon)" width="670" height="455" /></a>
   
   <p class="wp-caption-text">
     Samurai Jack (Cartoon)
@@ -46,7 +46,7 @@ Outside of Japan however, it is usually meant as animations exclusively create
 </div>
 
 <div style="width: 1270px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2017/08/sword_of_the_stranger.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2017/08/sword_of_the_stranger.png" alt="Sword of the Stranger (Anime)" width="1260" height="1080" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2017/08/sword_of_the_stranger.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2017/08/sword_of_the_stranger.png" alt="Sword of the Stranger (Anime)" width="1260" height="1080" /></a>
   
   <p class="wp-caption-text">
     Sword of the Stranger (Anime)
@@ -56,7 +56,7 @@ Outside of Japan however, it is usually meant as animations exclusively create
 So far, so good. But what about this one?
 
 <div style="width: 610px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2017/08/afro_samurai.png"><img src="//dawars.me/wp-content/uploads/2017/08/afro_samurai.png" alt="Afro Samurai (?)" width="600" height="237" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2017/08/afro_samurai.png"><img src="//dawars.me/wp-content/uploads/2017/08/afro_samurai.png" alt="Afro Samurai (?)" width="600" height="237" /></a>
   
   <p class="wp-caption-text">
     Afro Samurai (?)
@@ -108,7 +108,7 @@ So far, so good. But what about this one?
 </p>
 
 <div style="width: 1582px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2017/08/anime_cartoon_mockup.png"><img src="//dawars.me/wp-content/uploads/2017/08/anime_cartoon_mockup.png" alt="Application Concept" width="1572" height="1080" /></a>
+  <a href="https://dawars.me/wp-content/uploads/2017/08/anime_cartoon_mockup.png"><img src="//dawars.me/wp-content/uploads/2017/08/anime_cartoon_mockup.png" alt="Application Concept" width="1572" height="1080" /></a>
   
   <p class="wp-caption-text">
     Application Concept

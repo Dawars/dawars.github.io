@@ -6,7 +6,7 @@ layout: post
 ---
 <img class="aligncenter size-medium" src="//dawars.me/wp-content/uploads/2017/07/fma_ed_text.png" width="1277" height="716" />
 
-This post is the continuation of <a href="http://dawars.me/anime-cartoon-let-ai-decide/" target="_blank" rel="noopener">Anime or Cartoon? &#8211; Let the AI decide</a>. In it I describe the project I&#8217;m collecting the data for.
+This post is the continuation of <a href="https://dawars.me/anime-cartoon-let-ai-decide/" target="_blank" rel="noopener">Anime or Cartoon? &#8211; Let the AI decide</a>. In it I describe the project I&#8217;m collecting the data for.
 
 In Deep Learning we often work with huge datasets and this project is no exception. I collected around 300.000 images from both anime and cartoons. Processing this many images is not an easy task though. After downloading the images from various sources, I quickly looked into them and found a few potential issues&#8230;
 
@@ -16,11 +16,11 @@ In Deep Learning we often work with huge datasets and this project is no excepti
 
 I designed this simple web app to crowdsouce the labeling of these images. I was heavily inspired by <a href="https://www.galaxyzoo.org/#/classify" target="_blank" rel="noopener">GalaxyZoo</a> which  is made for classifying different kinds of galaxies.
 
-You can check out the latest version at: <http://dawars.me/anime>
+<!--You can check out the latest version at: <https://dawars.me/anime>-->
 
 <div id="attachment_408" style="width: 350px" class="wp-caption aligncenter">
-  <a href="http://dawars.me/wp-content/uploads/2017/07/image_labeling_app.png"><img class="wp-image-408 size-full" src="//dawars.me/wp-content/uploads/2017/07/image_labeling_app.png" alt="Labeling an image in the app" width="340" height="503" /></a>
-  
+  <a href="https://dawars.me/wp-content/uploads/2017/07/image_labeling_app.png"><img class="wp-image-408 size-full" src="//dawars.me/wp-content/uploads/2017/07/image_labeling_app.png" alt="Labeling an image in the app" width="340" height="503" /></a>
+
   <p class="wp-caption-text">
     Labeling an image in the app
   </p>
@@ -41,7 +41,7 @@ I made a tutorial to teach users what to look for in the images.
 
 <div style="width: 357px" class="wp-caption aligncenter">
   <a href="https://github.com/Dawars/Anime-Image-Labeling/blob/master/img/tutorial.png?raw=true" target="_blank" rel="noopener"><img title="Tutorial" src="https://github.com/Dawars/Anime-Image-Labeling/raw/master/img/tutorial.png?raw=true" alt="Tutorial" width="347" height="504" /></a>
-  
+
   <p class="wp-caption-text">
     Character tutorial
   </p>
@@ -64,9 +64,9 @@ For the database I chose** MySql** since I was already familiar with it and I d
 Partly from what I had learned at university I designed the Database Scheme. The simplified version can be seen below:
 
 **images **(<span style="text-decoration: underline;">images_id</span>, series_id, filename)
-  
+
 **ratings** (<span style="text-decoration: underline;">ratings_id</span>, image_id, text, person, logo, empty)
-  
+
 **series **(<span style="text-decoration: underline;">series_id</span>, folder, is_anime)
 
 I add a row for every **series** with its _title_,  _directory name_ and whether it&#8217;s _anime or not_. I store the images on the server every series having their own directory. For every image I insert a row in the **images **table and link back to the series through a foreign key.
@@ -80,23 +80,15 @@ Every time someone presses the next button I need to send out a new image to the
 
 After a little bit of experimentation and profiling I settled at randomly selecting the images. This solved the problems but I&#8217;m not sure if every image will be selected over time. And here is the final Query:
 
-[code lang=&#8221;sql&#8221;]
-  
+```sql
 SELECT image_id,filename,series.title,series.folder
-  
 FROM images AS r1
-  
 JOIN series USING(series_id)
-  
 JOIN (SELECT CEIL(RAND() * (SELECT MAX(image_id) FROM images)) AS id) AS r2
-  
 WHERE r1.image_id >= r2.id
-  
 ORDER BY r1.image_id ASC
-  
 LIMIT 1
-  
-[/code]
+```
 
 ### Frontend
 
@@ -108,7 +100,7 @@ But of course if the page doesn&#8217;t load the next page I cannot go back, rig
 
 <div style="width: 484px" class="wp-caption aligncenter">
   <a href="https://github.com/Dawars/Anime-Image-Labeling/raw/master/img/tooltip.png?raw=true"><img class="Showing the title of the series" title="Tutorial" src="https://github.com/Dawars/Anime-Image-Labeling/raw/master/img/tooltip.png?raw=true" alt="Showing the title of the series" width="474" height="593" /></a>
-  
+
   <p class="wp-caption-text">
     The title of the series
   </p>
@@ -116,13 +108,13 @@ But of course if the page doesn&#8217;t load the next page I cannot go back, rig
 
 ## Final words
 
-I&#8217;m very proud of myself to finish a project at this scale from backend to frontend all by myself. I was very excited for <a href="https://developer.android.com/topic/instant-apps/overview.html" target="_blank" rel="noopener">Instant Android apps</a> which became public just recently. But unfortunately its support is very limited and even restricted to Nexus devices at this time so I gave upon it. It would have given a native feel to mobile users.
+I'm very proud of myself to finish a project at this scale from backend to frontend all by myself. I was very excited for <a href="https://developer.android.com/topic/instant-apps/overview.html" target="_blank" rel="noopener">Instant Android apps</a> which became public just recently. But unfortunately its support is very limited and even restricted to Nexus devices at this time so I gave upon it. It would have given a native feel to mobile users.
 
 The project is on GitHub, if you want to check it out: <a href="https://github.com/Dawars/Anime-Image-Labeling" target="_blank" rel="noopener">https://github.com/Dawars/Anime-Image-Labeling</a>
 
 <div class="postArticle-content js-postField js-notesSource js-trackedPost" data-post-id="3a5192c64fb8" data-source="post_page" data-tracking-context="postPage" data-scroll="native">
-  <section class="section section--body section--last"> 
-  
+  <section class="section section--body section--last">
+
   <div class="section-content">
     <div class="section-inner sectionLayout--insetColumn">
       <p id="94d5" class="graf graf--p graf--leading graf--trailing">
@@ -130,6 +122,6 @@ The project is on GitHub, if you want to check it out: <a href="https://github.c
       </p>
     </div>
   </div></section>
-</div><footer class="u-paddingTop10"></footer> 
+</div><footer class="u-paddingTop10"></footer>
 
 &nbsp;
