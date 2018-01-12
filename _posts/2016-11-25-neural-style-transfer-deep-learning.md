@@ -62,6 +62,8 @@ With this method we achieved the followings:
   </p>
 </div>
 
+<p>As we thought deep dream creates simple patterns and not something recognisable (e.g. as a dog). Without octaves this is the best we could achieve.
+</p>
 ## Replacing the network model
 
 We had two networks in mind originally: ResNet and InceptionV3
@@ -90,7 +92,7 @@ I managed to <a href="https://github.com/Dawars/SqueezeNet-tf" target="_blank">i
 At the end I chose a different path and went with good old Alexnet.
 
 <div class="wp-caption aligncenter">
-  <a href="/wp-content/2016/12/style_transfer_alexnet.png"><img class="size-medium" src="/wp-content/2016/12/style_transfer_alexnet.png" alt="Style Transfer with Alexnet" /></a>
+  <a href="/wp-content/uploads/2016/12/style_transfer_alexnet.png"><img class="size-medium" src="/wp-content/uploads/2016/12/style_transfer_alexnet.png" alt="Style Transfer with Alexnet" /></a>
 
   <p class="wp-caption-text">Style Transfer with Alexnet
   </p>
