@@ -48,7 +48,7 @@ $$  \sum_{i=0}^{m} metaball_{i}(x, y, z) \leq threshold$$
 
 where _m_ is the number of charges/blobs, $$metaball_{i}(x, y, z)$$ computes the strength of the i-th charge at the location $$(x, y, z)$$ and _threshold_ is an arbitrary value we choose.
 
-The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($$ metaball_{i}(x, y, z)=\frac{1}{(x-x_{i})^2+(y-y_{i})^2+(z-z_{i})^2} where $$ (x_{i}, y_{i}, z_{i})$$ is the position of the i-th charge)
+The strength of a charge is inversely proportional to the square of the distance. In other words it decreases as we move further away. ($$ metaball_{i}(x, y, z)=\frac{1}{(x-x_{i})^2+(y-y_{i})^2+(z-z_{i})^2} $$ where $$ (x_{i}, y_{i}, z_{i}) $$ is the position of the i-th charge)
 
 Hint: It might be interesting to play around with this function and see how the surface changes. Also try out a few different threshold values and see what works best.
 
@@ -82,7 +82,8 @@ We want the surface to always align to the grid (Axis Aligned), making a nice mi
 
 I created a <a href="https://github.com/Dawars/CraftingPillars/blob/1.10.2/src/main/java/me/dawars/craftingpillars/client/render/Blobs.java" target="_blank" rel="noopener">Blobs</a> class to store the location, strength and velocity of the _charges_ and functions to calculate the field strength.
 
-<pre><code class="java">public static float[][][] fieldStrength(List blobs)
+```java
+public static float[][][] fieldStrength(List blobs)
 {
     float result[][][] = new float[16][16][16];
 
@@ -106,7 +107,7 @@ I created a <a href="https://github.com/Dawars/CraftingPillars/blob/1.10.2/src/m
 
     return result;
 }
-</code></pre>
+```
 
 This functions computes the field strength in a 16 \* 16 \* 16 grid according to the equation.
 
@@ -116,7 +117,8 @@ First we iterate through each grid point and check if it is inside a blob. If it
 
 Here is the simplified code from the <a href="https://github.com/Dawars/CraftingPillars/blob/1.10.2/src/main/java/me/dawars/craftingpillars/client/render/TESRTankPillar.java" target="_blank" rel="noopener">TileEntityRenderer</a>:
 
-<pre><code class="java">Tessellator tess = Tessellator.getInstance();
+```java
+Tessellator tess = Tessellator.getInstance();
 VertexBuffer buffer = tess.getBuffer();
 
 buffer.setTranslation(x, y, z);
@@ -177,7 +179,7 @@ for (int i = 0; i &lt; 16; i++)
 
 tess.draw();
 buffer.setTranslation(0, 0, 0);
-</code></pre>
+```
 
 ## Animation
 
@@ -185,7 +187,8 @@ As a last step we need to animate the blobs. I store a list of blobs in the Tile
 
 In every tick/update I call the update function in the Blobs class for every charge:
 
-<pre><code class="java">public void update(float speed)
+```java
+public void update(float speed)
 {
     if(this.x &gt; maxX || this.x &lt; minX)
         this.velX *= -1F;
@@ -198,7 +201,7 @@ In every tick/update I call the update function in the Blobs class for every cha
     this.y += speed * this.velY;
     this.z += speed * this.velZ;
 }
-</code></pre>
+```
 
 This checks if a charge (centre of a blob) is colliding with the sides of our space. We will simulate perfectly elastic collisions, so we just need to multiply the respective velocity coordinate with -1.
 
