@@ -5,7 +5,7 @@ categories: ["Machine Learning"]
 tags: ["Anime", "Deep Learning"]
 author: dawars
 ---
-<img class="aligncenter size-medium" src="//dawars.me/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png" alt="Anime or Cartoon? Edward from Fullmetal Alchemist and Aang from Avatar" width="1920" height="1080" /></p>
+<img class="aligncenter size-medium" src="//dawars.me/wp-content/uploads/2017/08/anime_vs_cartoon_cover.png" alt="Anime or Cartoon? Edward from Fullmetal Alchemist and Aang from Avatar" width="1920" height="1080" />
 
 <p id="ca5b" class="graf graf--p graf-after--figure">
   There is an ongoing debate about the definition of Anime.

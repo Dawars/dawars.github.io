@@ -32,7 +32,7 @@ There I joined a team that were looking into Neural Style Transfer. We started o
 
 A very basic explanation of how this works:
 
-The idea is that different layers of the convolutional layers have learned different features in an image. (We don&#8217;t use the fully connected layers which are for classification.)
+The idea is that different layers of the convolutional layers have learned different features in an image. (We don't use the fully connected layers which are for classification.)
 
 The lower layers close to the input image can only recognize different lines and edges in them while the upper layers have more advanced shapes such as circles, triangles.
 
@@ -40,7 +40,7 @@ The algorithm extracts the style from the lower layers (edges, curves) and the c
 
 ## Deep Dream
 
-Deep Dream is achieved by maximizing activations in a specific layer or neuron, for example if an activation represents how likely is it that the image contains a dog, maximizing it will start to form dogs on the picture. Of course the effect can be so little that humans can&#8217;t recognise the dogs, only the network can. Octaves solves this problem but the existing network is so different that it would be really hard to implement and it would slow down the process even more.
+Deep Dream is achieved by maximizing activations in a specific layer or neuron, for example if an activation represents how likely is it that the image contains a dog, maximizing it will start to form dogs on the picture. Of course the effect can be so little that humans can't recognise the dogs, only the network can. Octaves solves this problem but the existing network is so different that it would be really hard to implement and it would slow down the process even more.
 
 What we do however is find layers or neurons which are not used in the style and content transfer and maximize the activations there. This way the optimizer will not &#8220;fix&#8221; deep dream by making style or content more accurate.
 
@@ -54,11 +54,11 @@ With this method we achieved the followings:
   </p>
 </div>
 
-<div style="width: 522px" class="wp-caption aligncenter">
-  <a href="https://dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/11/starry_night-golden_bridge-deep_dream.png" alt="Deep dream causes to change the brush strokes but not the whole style or content" width="512" height="383" /></a>
+<div class="wp-caption aligncenter">
+  <a href="/wp-content/uploads/2016/12/dream_and_style.png"><img class="size-medium" src="/wp-content/uploads/2016/12/dream_and_style.png" alt="Maximizing another neuron activation with style transfer" /></a>
   
   <p class="wp-caption-text">
-    Deep dream causes to change the brush strokes but not the whole style or content
+   Maximizing another neuron activation with style transfer
   </p>
 </div>
 
@@ -66,9 +66,10 @@ With this method we achieved the followings:
 
 We had two networks in mind originally: ResNet and InceptionV3
 
-They have top-5 errors of 5.7% and 5.6% respectively as opposed to the 9.0% of VGG-19. The biggest problem with ResNet is probably its size and thus the backprop time gets even worse. The Inception model is very promising because of the increased accuracy and the required time to run an epoch is about 4 times lower. (These values are based on the **<a href="https://github.com/jcjohnson/cnn-benchmarks" target="_blank">CNN-Benchmark</a>** and aren&#8217;t tested at the time of the writing of this article) .
+They have top-5 errors of 5.7% and 5.6% respectively as opposed to the 9.0% of VGG-19. The biggest problem with ResNet is probably its size and thus the backprop time gets even worse. The Inception model is very promising because of the increased accuracy and the required time to run an epoch is about 4 times lower. (These values are based on the **<a href="https://github.com/jcjohnson/cnn-benchmarks" target="_blank">CNN-Benchmark</a>** and aren't tested at the time of the writing of this article) .
 
 This _might_ increase the quality a little bit but it is a good way to learn in which layers what kinds of features are represented in the network .
+
 
 ### SqueezeNet
 
@@ -82,16 +83,28 @@ My idea was to use SqueezeNet since it has a very small size (4.8MB) compared to
   </p>
 </div>
 
-My expectation is that it would fit on mobile phones and run in reasonable time  without sacrificing quality too much, and getting better results than the <a href="https://github.com/jcjohnson/fast-neural-style" target="_blank">Fast Neural Style</a>. My estimation is that it would run a little faster than ~5/500 => 1% of the time on the GPU. Which for the GTX 970 is about 4 seconds. Of course the GPU is very good at running these operations in parallel and the reduction in the number of neurons wouldn&#8217;t utilize this but on a mobile phone this can makes the program runnable in the first place.
+My expectation is that it would fit on mobile phones and run in reasonable time  without sacrificing quality too much, and getting better results than the <a href="https://github.com/jcjohnson/fast-neural-style" target="_blank">Fast Neural Style</a>. My estimation is that it would run a little faster than ~5/500 => 1% of the time on the GPU. Which for the GTX 970 is about 4 seconds. Of course the GPU is very good at running these operations in parallel and the reduction in the number of neurons wouldn't utilize this but on a mobile phone this can makes the program runnable in the first place.
 
-I managed to <a href="https://github.com/Dawars/SqueezeNet-tf" target="_blank">implement the architecture</a> of the network but unfortunately I couldn&#8217;t use the pretrained weigths in Tensorflow because it is given in a coffee model. Training a convolutional network this big from scratch is no easy task. It would require hundreds of hours with my resources and there are a lot of ways I can mess up. I&#8217;m leaving this to after my exam period when I have more spare time.
+I managed to <a href="https://github.com/Dawars/SqueezeNet-tf" target="_blank">implement the architecture</a> of the network but unfortunately I couldn't use the pretrained weigths in Tensorflow because it is given in a coffee model. Training a convolutional network this big from scratch is no easy task. It would require hundreds of hours with my resources and there are a lot of ways it can go wrong. I'm leaving this to after my exam period when I have more spare time.
+
+At the end I chose a different path and went with good old Alexnet.
+
+<div class="wp-caption aligncenter">
+  <a href="/wp-content/2016/12/style_transfer_alexnet.png"><img class="size-medium" src="/wp-content/2016/12/style_transfer_alexnet.png" alt="Style Transfer with Alexnet" /></a>
+
+  <p class="wp-caption-text">Style Transfer with Alexnet
+  </p>
+</div>
+
+As you can see the results are far from beautiful. It is true that with this network the epoch finish faster but it needs 10 times more iterations to reach this stage.
+After all we are sacrificing quality and not gaining any processing time.
 
 ## Future plans
 
-During the next semester break when I have enough time for the task I&#8217;m going to training SqueezeNet with ImageNet and publishing it.
+During the next semester break when I have enough time for the task I'm going to training SqueezeNet with ImageNet and publishing it.
 
-After this project I&#8217;m planning to implement kanji learning using CNN for Language Locker. With this feature the users could practice drawing the given kanjis on the lockscreen.
+After this project I'm planning to implement kanji learning using CNN for Language Locker. With this feature the users could practice drawing the given kanjis on the lockscreen.
 
-I&#8217;ve already found promising data sets: <a href="http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html" target="_blank">http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html</a> and <a href="https://github.com/skishore/makemeahanzi" target="_blank">https://github.com/skishore/makemeahanzi</a>
+I've already found promising data sets: <a href="http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html" target="_blank">http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html</a> and <a href="https://github.com/skishore/makemeahanzi" target="_blank">https://github.com/skishore/makemeahanzi</a>
 
 By combining these two I hope to train an LSTM Neural Network which can recognize even the order of the strokes.

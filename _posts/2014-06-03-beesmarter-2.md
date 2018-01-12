@@ -38,9 +38,11 @@ As it turned out in the final round, we had to develop our app further. We had 1
 <p>
 We started with limited knowledge about networking and with no experience.
 We settled early on using UDP for low latency (this was a bad choice in retrospect).
-Alternatives were Bluetooth and Wifi P2P and of course TCP.
+</p>
+<p>Alternatives were Bluetooth and Wifi P2P and of course TCP.
 We didn't choose Bluetooth because in the future we wouldn't have been able to extend to other platforms easily. Wifi P2P required a high Android API which wasn't widely adopted at that time.
-Since the game didn't have a game loop - it only updated when something changed, user event - we sent over the network the map state every time a change had occurred.
+</p>
+<p>Since the game didn't have a game loop - it only updated when something changed, user event - we sent over the network the map state every time a change had occurred.
 </p>
 <p>
 In spite of the starting difficulties we managed to implement the networking and even a map creator. It helped a lot that we had a stable starting point. In the remaining time we made some UI changes. With this we got 950 out of 1000 points and got 1st place in competition. Not bad at all!
