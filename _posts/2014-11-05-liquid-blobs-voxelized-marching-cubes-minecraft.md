@@ -87,13 +87,13 @@ public static float[][][] fieldStrength(List blobs)
 {
     float result[][][] = new float[16][16][16];
 
-    for(int x = 0; x &lt; 16; x++)
+    for(int x = 0; x < 16; x++)
     {
-        for(int y = 0; y &lt; 16; y++)
+        for(int y = 0; y < 16; y++)
         {
-            for(int z = 0; z &lt; 16; z++)
+            for(int z = 0; z < 16; z++)
             {
-                for(int i = 0; i &lt; blobs.size(); i++)
+                for(int i = 0; i < blobs.size(); i++)
                 {
                     float xDist = blobs.get(i).x - x;
                     float yDist = blobs.get(i).y - y;
@@ -128,10 +128,10 @@ final float THRESHOLD = 1;
 
 float[][][] field = Blobs.fieldStrength(te.getBlobs());
 
-for (int i = 0; i &lt; 16; i++)
-    for (int j = 0; j &lt; 16; j++)
-        for (int k = 0; k &lt; 16; k++) if (field[i][j][k] &gt;= THRESHOLD) { // Cell is in the blob
-                if (j == 15 || field[i][j + 1][k] &lt; THRESHOLD) { // neighbour is outside (or at space bound)
+for (int i = 0; i < 16; i++)
+    for (int j = 0; j < 16; j++)
+        for (int k = 0; k < 16; k++) if (field[i][j][k] &gt;= THRESHOLD) { // Cell is in the blob
+                if (j == 15 || field[i][j + 1][k] < THRESHOLD) { // neighbour is outside (or at space bound)
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
@@ -139,28 +139,28 @@ for (int i = 0; i &lt; 16; i++)
 
                 }
 
-                if (j == 0 || (int) field[i][j - 1][k] &lt; THRESHOLD) {
+                if (j == 0 || (int) field[i][j - 1][k] < THRESHOLD) {
                     buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                 }
 
-                if (k == 15 || (int) field[i][j][k + 1] &lt; THRESHOLD) {
+                if (k == 15 || (int) field[i][j][k + 1] < THRESHOLD) {
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
 
                 }
-                if (k == 0 || (int) field[i][j][k - 1] &lt; THRESHOLD) {
+                if (k == 0 || (int) field[i][j][k - 1] < THRESHOLD) {
                     buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j) / 16F, (k) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex();
                 }
 
-                if (i == 15 || (int) field[i + 1][j][k] &lt; THRESHOLD) {
+                if (i == 15 || (int) field[i + 1][j][k] < THRESHOLD) {
                     buffer.pos((i + 1) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i + 1) / 16F, (j) / 16F, (k) / 16F).endVertex();
@@ -168,7 +168,7 @@ for (int i = 0; i &lt; 16; i++)
 
                 }
 
-                if (i == 0 || (int) field[i - 1][j][k] &lt; THRESHOLD) {
+                if (i == 0 || (int) field[i - 1][j][k] < THRESHOLD) {
                     buffer.pos((i) / 16F, (j) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k + 1) / 16F).endVertex();
                     buffer.pos((i) / 16F, (j + 1) / 16F, (k) / 16F).endVertex();
@@ -190,11 +190,11 @@ In every tick/update I call the update function in the Blobs class for every cha
 ```java
 public void update(float speed)
 {
-    if(this.x &gt; maxX || this.x &lt; minX)
+    if(this.x &gt; maxX || this.x < minX)
         this.velX *= -1F;
-    if(this.y &gt; maxY || this.y &lt; minY) 
+    if(this.y &gt; maxY || this.y < minY) 
         this.velY *= -1F; 
-    if(this.z &gt; maxZ || this.z &lt; minZ)
+    if(this.z &gt; maxZ || this.z < minZ)
         this.velZ *= -1F;
 
     this.x += speed * this.velX;
