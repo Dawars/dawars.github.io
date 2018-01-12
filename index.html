@@ -2,59 +2,51 @@
 layout: default
 title: Dawars' Blog
 ---
-<div id="content" class="container">
-    <div class="row" role="main">
-        <div class="col-md-8">
-            {% for post in paginator.posts %}
+{% for post in paginator.posts %}
 
-            <article id="post-25" class="post-25 post type-post status-publish format-standard has-post-thumbnail">
-                <!--<img width="750" height="571" src="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg" class="attachment-featured size-featured wp-post-image" alt="" srcset="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg 750w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-300x228.jpg 300w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-1024x780.jpg 1024w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle.jpg 1050w" sizes="(max-width: 750px) 100vw, 750px"> -->
-                <h3 class="post-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
+<article id="post-25" class="post-25 post type-post status-publish format-standard has-post-thumbnail">
+    <!--<img width="750" height="571" src="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg" class="attachment-featured size-featured wp-post-image" alt="" srcset="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg 750w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-300x228.jpg 300w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-1024x780.jpg 1024w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle.jpg 1050w" sizes="(max-width: 750px) 100vw, 750px"> -->
+    <h3 class="post-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
 
-                {{ post.excerpt }}
-                {% capture content_words %}
-                {{ post.content | number_of_words }}
-                {% endcapture %}
-                {% capture excerpt_words %}
-                {{ post.excerpt | number_of_words }}
-                {% endcapture %}
-                {% if excerpt_words != content_words %}
-                <p><a class="btn btn-sm btn-primary" href="{{ post.url }}#read-more" role="button">Read more >> <i
-                        class="fa fa-arrow-circle-right"></i></a>
-                </p>
-                {% endif %}
+    {{ post.excerpt }}
+    {% capture content_words %}
+    {{ post.content | number_of_words }}
+    {% endcapture %}
+    {% capture excerpt_words %}
+    {{ post.excerpt | number_of_words }}
+    {% endcapture %}
+    {% if excerpt_words != content_words %}
+    <p><a class="btn btn-sm btn-primary" href="{{ post.url }}#read-more" role="button">Read more >> <i
+            class="fa fa-arrow-circle-right"></i></a>
+    </p>
+    {% endif %}
 
-                <div class="post-meta clearfix post-meta-list">
-                    <p class="author-date">
-                        <span class="glyphicon glyphicon-user"></span> {{post.author}}
-                        <span class="glyphicon glyphicon-calendar"></span>
-                        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
-                    </p>
-                    <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
-                        {% for tag in post.tags %}
-                        {% capture tag_name %}{{ tag }}{% endcapture %}
-                        <a href="/tag/{{ tag_name }}/">{{ tag_name }}</a> <span class="slash"> / </span>
-                        {% endfor %}
-                </div>
-
-            </article>
-
-            {% endfor %} {% if paginator.total_pages > 1 %}
-            <ul class="pager">
-                {% if paginator.previous_page %}
-                <li class="previous"><a
-                        href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-                    Previous page</a>
-                </li>
-                {% endif %}
-                {% if paginator.next_page %}
-                <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next
-                    page &rarr;</a>
-                </li>
-                {% endif %}
-            </ul>
-            {% endif %}
-
-        </div>
+    <div class="post-meta clearfix post-meta-list">
+        <p class="author-date">
+            <span class="glyphicon glyphicon-user"></span> {{post.author | capitalize}}
+            <span class="glyphicon glyphicon-calendar"></span>
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+        </p>
+        <p class="post-tags"><span class="glyphicon glyphicon-tags"></span>
+            {% for tag in post.tags %}
+            {% capture tag_name %}{{ tag }}{% endcapture %}
+            <a href="/tag/{{ tag_name }}/">{{ tag_name }}</a> <span class="slash"> / </span>
+            {% endfor %}
     </div>
+
+</article>
+<hr class="post-divider">
+
+{% endfor %} {% if paginator.total_pages > 1 %}
+<div class="page-links">
+    {% if paginator.previous_page %}
+    <a class="page-numbers" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+        Previous page</a>
+    {% endif %}
+    {% if paginator.next_page %}
+    <a class="page-numbers" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next
+        page &rarr;</a>
+
+    {% endif %}
 </div>
+{% endif %}

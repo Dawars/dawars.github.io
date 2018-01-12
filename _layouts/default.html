@@ -5,48 +5,53 @@
 
 <body class="home blog logged-in admin-bar no-customize-support et_monarch">
 {% include page-header.html %}
-<!--
-    <div id="content" class="container">  -->
-{{ content }}
-<div id="primary-sidebar" class="col-md-4">
-    <aside id="monarchwidget-6" class="widget widget_monarchwidget">
-        <hr>
-        <h4>Follow Me</h4>
-        <div class="et_social_networks et_social_1col et_social_flip et_social_rounded et_social_left et_social_withcounts et_social_mobile_on et_social_withnetworknames et_social_outer_dark widget_monarchwidget">
+
+<div id="content" class="container">
+    <div class="row" role="main">
+        <div class="col-lg-8">
+
+            {{ content }}
+        </div>
+        <div id="primary-sidebar" class="col-md-4">
+            <aside id="monarchwidget-6" class="widget widget_monarchwidget">
+                <hr>
+                <h4>Follow Me</h4>
+                <div class="et_social_networks et_social_1col et_social_flip et_social_rounded et_social_left et_social_withcounts et_social_mobile_on et_social_withnetworknames et_social_outer_dark widget_monarchwidget">
 
 
-            <ul class="et_social_icons_container">
-                <li class="et_social_twitter">
-                    <a href="https://twitter.com/dawars00" class="et_social_follow" data-social_name="twitter"
-                       data-social_type="follow" data-post_id="6" target="_blank">
-                        <i class="et_social_icon et_social_icon_twitter"></i>
-                        <div class="et_social_network_label et_social_display_follow_counts" data-min_count="7"
-                             data-network="twitter" data-index="0">
-                            <div class="et_social_networkname">Twitter</div>
-                        </div>
-                        <span class="et_social_overlay"></span>
-                    </a>
-                </li>
-                <li class="et_social_medium">
-                    <a href="https://medium.com/@Dawars" class="et_social_follow" data-social_name="medium"
-                       data-social_type="follow" data-post_id="6" target="_blank">
-                        <i class="et_social_icon et_social_icon_medium"></i>
-                        <div class="et_social_network_label">
-                            <div class="et_social_networkname">Medium</div>
-                        </div>
-                        <span class="et_social_overlay"></span>
-                    </a>
-                </li>
-                <li class="et_social_instagram">
-                    <a href="https://instagram.com/dawars00" class="et_social_follow" data-social_name="instagram"
-                       data-social_type="follow" data-post_id="6" target="_blank">
-                        <i class="et_social_icon et_social_icon_instagram"></i>
-                        <div class="et_social_network_label">
-                            <div class="et_social_networkname">Instagram</div>
-                        </div>
-                        <span class="et_social_overlay"></span>
-                    </a>
-                </li><!--
+                    <ul class="et_social_icons_container">
+                        <li class="et_social_twitter">
+                            <a href="https://twitter.com/dawars00" class="et_social_follow" data-social_name="twitter"
+                               data-social_type="follow" data-post_id="6" target="_blank">
+                                <i class="et_social_icon et_social_icon_twitter"></i>
+                                <div class="et_social_network_label et_social_display_follow_counts" data-min_count="7"
+                                     data-network="twitter" data-index="0">
+                                    <div class="et_social_networkname">Twitter</div>
+                                </div>
+                                <span class="et_social_overlay"></span>
+                            </a>
+                        </li>
+                        <li class="et_social_medium">
+                            <a href="https://medium.com/@Dawars" class="et_social_follow" data-social_name="medium"
+                               data-social_type="follow" data-post_id="6" target="_blank">
+                                <i class="et_social_icon et_social_icon_medium"></i>
+                                <div class="et_social_network_label">
+                                    <div class="et_social_networkname">Medium</div>
+                                </div>
+                                <span class="et_social_overlay"></span>
+                            </a>
+                        </li>
+                        <li class="et_social_instagram">
+                            <a href="https://instagram.com/dawars00" class="et_social_follow"
+                               data-social_name="instagram"
+                               data-social_type="follow" data-post_id="6" target="_blank">
+                                <i class="et_social_icon et_social_icon_instagram"></i>
+                                <div class="et_social_network_label">
+                                    <div class="et_social_networkname">Instagram</div>
+                                </div>
+                                <span class="et_social_overlay"></span>
+                            </a>
+                        </li><!--
                 <li class="et_social_email">
                     <a href="mailto:me@dawars.me" class="et_social_follow" data-social_name="email"
                        data-social_type="follow" data-post_id="6" target="_blank">
@@ -57,19 +62,19 @@
                         <span class="et_social_overlay"></span>
                     </a>
                 </li>-->
-                <li class="et_social_github">
-                    <a href="https://github.com/dawars/" class="et_social_follow" data-social_name="github"
-                       data-social_type="follow" data-post_id="6" target="_blank">
-                        <i class="et_social_icon et_social_icon_github"></i>
-                        <div class="et_social_network_label">
-                            <div class="et_social_networkname">GitHub</div>
-                        </div>
-                        <span class="et_social_overlay"></span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </aside><!--
+                        <li class="et_social_github">
+                            <a href="https://github.com/dawars/" class="et_social_follow" data-social_name="github"
+                               data-social_type="follow" data-post_id="6" target="_blank">
+                                <i class="et_social_icon et_social_icon_github"></i>
+                                <div class="et_social_network_label">
+                                    <div class="et_social_networkname">GitHub</div>
+                                </div>
+                                <span class="et_social_overlay"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside><!--
     <aside id="tag_cloud-3" class="widget widget_tag_cloud">
         <hr>
         <h4>Tags</h4>
@@ -147,12 +152,12 @@
             </li>
         </ul>
     </aside>-->
+        </div>
+    </div>
 </div>
 
 {% include page-footer.html %}
 
-<!--</div>
--->
 
 <script type='text/javascript'
         src='https://wp-themes.com/wp-content/themes/franklin/assets/js/bootstrap.min.js?ver=3.1.1'></script>
