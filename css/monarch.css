@@ -105,7 +105,7 @@
 .et_monarch .et_social_icon_amazon:before,			.et_monarch .et_social_icon_amazon:after 			{ content: "\e62d"; }
 .et_monarch .et_social_icon_delicious:before,		.et_monarch .et_social_icon_delicious:after 		{ content: "\e62e"; }
 .et_monarch .et_social_icon_googleplus:before,		.et_monarch .et_social_icon_googleplus:after 		{ content: "\e62f"; }
-.et_monarch .et_social_icon_instagram:before,		.et_monarch .et_social_icon_instagram:after 		{ content: "\e630"; }
+.et_monarch .et_social_icon_instagram:before,		.et_monarch .et_social_icon_instagram:after 		{ content: "\f16d"; }
 .et_monarch .et_social_icon_linkedin:before,		.et_monarch .et_social_icon_linkedin:after 			{ content: "\e631"; }
 .et_monarch .et_social_icon_myspace:before,			.et_monarch .et_social_icon_myspace:after 			{ content: "\e632"; }
 .et_monarch .et_social_icon_picassa:before,			.et_monarch .et_social_icon_picassa:after 			{ content: "\e633"; }
