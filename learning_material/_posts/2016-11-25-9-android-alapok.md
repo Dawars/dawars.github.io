@@ -2,7 +2,6 @@
 title: 9. Android alapok
 date: 2016-11-25T12:00:17+00:00
 author: dawars
-layout: default
 categories: [Android Game Programming]
 ---
 A szakkörön készítettünk egy képernyőt (Activity), ahol egy gomb (Button), szövegbeviteli mező (EditText).

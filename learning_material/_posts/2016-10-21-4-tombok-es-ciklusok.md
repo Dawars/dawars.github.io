@@ -2,7 +2,6 @@
 title: 4. Tömbök és ciklusok gyakorlása
 date: 2016-10-21T22:50:25+00:00
 author: dawars
-layout: default
 categories: [Android Game Programming]
 ---
 ## Stringek

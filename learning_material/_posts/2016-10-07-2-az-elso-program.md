@@ -2,7 +2,6 @@
 title: 2. Az első program
 date: 2016-10-07T13:06:28+00:00
 author: dawars
-layout: default
 categories: [Android Game Programming]
 ---
 Mint általában, most is az első programunk a Hello World lesz, ami csak annyit csinál, hogy kiírja a Parancssorba, hogy &#8220;Hello World&#8221;.

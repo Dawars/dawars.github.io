@@ -2,7 +2,6 @@
 title: 11. Canvas és rajzolás a képernyőre
 date: 2016-12-10T17:47:51+00:00
 author: dawars
-layout: default
 categories: [Android Game Programming]
 ---
 A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
