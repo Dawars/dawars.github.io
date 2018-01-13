@@ -5,14 +5,20 @@ layout: default
     <span class="glyphicon glyphicon-home"></span>
     <a href="/" rel="home">Home</a>
     <span class="glyphicon glyphicon-chevron-right"></span>
-    <a href="#" rel="category">{{page.categories | first | capitalize}}
+    <a href="#" rel="category">
+
+        {% assign words = page.categories | first | split: '-'}}
+
+        {% for word in words %}
+        {{ word | capitalize}}
+        {% endfor %}
     </a>
     <span class="glyphicon glyphicon-chevron-right"></span>{{ page.title }}</p>
 <article id="post-19"
          class="post-19 post type-post status-publish format-standard hentry category-uncategorized tag-boat tag-lake">
 
     <h1 id="post-title">{{ page.title }}</h1>
-    {{ content | replace: '<!--more-->', '<a class="anchor" id="read-more"
+    {{ content | replace: '<!--more--> ', '<a class="anchor" id="read-more"
                                               style="display: block; position: relative; top: -20px; visibility: hidden;"></a>'
     }}
 
@@ -38,4 +44,5 @@ layout: default
 <!--<script type="text/javascript"
         src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+        type="text/javascript"></script>
