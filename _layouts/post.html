@@ -7,7 +7,7 @@ layout: default
     <span class="glyphicon glyphicon-chevron-right"></span>
     <a href="#" rel="category">
 
-        {% assign words = page.categories | first | split: '-'}}
+        {% assign words = page.categories | first | split: '-' %}
 
         {% for word in words %}
         {{ word | capitalize}}
