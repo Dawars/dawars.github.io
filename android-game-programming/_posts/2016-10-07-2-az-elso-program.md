@@ -63,17 +63,11 @@ Next, next, majd ha mindent jól csináltál, egy ilyen ablak jelenik:
 Az _src_ mappában hozzunk létre egy új class-t, mint ahogy az előző oldalon csináltuk:
 
 ```java
-  
 // Hello.java
-  
 class Hello {
-      
-public static void main(String[] args){
-          
-System.out.println("Hello world");
-      
-}
-  
+    public static void main(String[] args){
+        System.out.println("Hello world");
+    }
 }
   
 ```

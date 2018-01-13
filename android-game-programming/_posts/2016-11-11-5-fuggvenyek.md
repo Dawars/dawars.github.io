@@ -19,7 +19,7 @@ Vegyük a következő példát: Javaban nincsen külön művelet a hatványozás
 
 Először írjunk egy kódrészletet, ami kiszámolja a $latex base^n $ eredményét.
 
-> A hatványozás az a művelet, ahol a _base_ -t _n_ -szer összeszorozzuk. Pl: $$ 2^3 = 2\*2\*2 = 8 $$
+> A hatványozás az a művelet, ahol a _base_ -t _n_ -szer összeszorozzuk. Pl: $$ 2^3 = 2 * 2 * 2 = 8 $$
 
 ```java
 double base = 2;
@@ -46,8 +46,8 @@ Most ezt alakítsuk át egy egyszerű függvénnyé:
 /**
 * Hatványozó függvény
 *
-* double base &#8211; hatványalap
-* double n &#8211; hatványkitevő, hányszor szorozzuk össze a base-t
+* double base - hatványalap
+* double n - hatványkitevő, hányszor szorozzuk össze a base-t
 * @return base ^ n
 */
 (static) double hatvanyozas(double base, int n){
@@ -89,8 +89,8 @@ Nézzük a teljes kódot:
 /**
 * Hatványozó függvény
 *
-* @param base &#8211; hatványalap
-* @param n &#8211; hatványkitevő
+* @param base - hatványalap
+* @param n - hatványkitevő
 * @return base ^ n = base * base … * base
 */
 static double hatvany(double base, int n) {

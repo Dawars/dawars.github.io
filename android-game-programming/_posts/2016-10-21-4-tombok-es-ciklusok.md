@@ -22,7 +22,6 @@ Egy másik fontos metódus a _length()_, ami megadja a String hosszát. Ezen kí
 
 ```java
 String text = "Hello";
-  
 System.out.println(text.length());
 ```
 
@@ -34,26 +33,19 @@ Elősször nézzük meg, hogyan tudunk tömböket létrehozni:
 
 ```java
 // int tömb, értékek megadásával
-  
 int[] fibonacci = new int[]{ 1, 1, 2, 3, 5, 8 };
   
 ```
 
 ```java
 // mérettel megadás, 6 hosszú
-  
 int[] fibonacci = new int[6];
-  
+
 fibonacci[0] = 1;
-  
 fibonacci[1] = 1;
-  
 fibonacci[2] = 2;
-  
 fibonacci[3] = 3;
-  
 fibonacci[4] = 5;
-  
 fibonacci[5] = 8; // az 5 az utolsó index, mert 0-tól kezdjük a számozást
 ```
 
@@ -66,10 +58,10 @@ Alapvetően két fontos ciklus van a Javaban, a _for_ és a _while_ ciklus.
 A while az  egyszerűbb, amíg teljesül a <span style="text-decoration: underline;">feltétel</span>, addig végrehajtja az <span style="text-decoration: underline;">utasításokat</span>:
 
 ```java
-while (feltétel) {
-    Utasítás1;
+while (feltetel) {
+    Utasitas1;
     …
-    UtasításN;
+    UtasitasN;
   
 }
 ```
@@ -84,14 +76,10 @@ Ennek egy változata a _hátultesztelős_ ciklus, ami végrehajtja az utasítá
 
 ```java
 do {
-      
-    Utasítás1;
-
+    Utasitas1;
     …
-
-    UtasításN;
-  
-} while (feltétel);
+    UtasitasN;
+} while (feltetel);
   
 ```
 [<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png" alt="" width="355" height="335" />](https://dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png)
@@ -107,10 +95,10 @@ A for utáni zárójelben három dolog van:
   * Amit minden futás után meg kell csinálni)
 
 ```java
-for (inicializálás; feltétel; inkrementálás) {
-    Utasítás1;
+for (inicializalas; feltetel; inkrementalas) {
+    Utasitas1;
     …
-    UtasításN;
+    UtasitasN;
 }
 ```
 
@@ -131,7 +119,7 @@ for (int i = 0; i < tombNev.length; i++) {
 A foreach ciklus egy még tovább egyszerűsített ciklus, egy tömböt vagy kollekciót (hamarosan&#8230;) tudunk vele bejárni, de a sima for ciklussal szemben elveszítjük az (init, feltétel, inkrement) hármas módosításának lehetőségét.
 
 ```java
-// for (valtozótípus név : tömbnév)
+// for (valtozotipus nev : tombnev)
 for (int szam : fibonacci) {
     System.out.println(szam);
 }
