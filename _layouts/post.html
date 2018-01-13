@@ -5,7 +5,7 @@ layout: default
     <span class="glyphicon glyphicon-home"></span>
     <a href="/" rel="home">Home</a>
     <span class="glyphicon glyphicon-chevron-right"></span>
-    <a href="{{page.categories | first}}" rel="category">
+    <a href="/{{page.categories | first}}" rel="category">
 
         {% assign words = page.categories | first | split: '-' %}
 
