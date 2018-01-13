@@ -3,6 +3,7 @@ layout: default
 title: Dawars' Blog
 ---
 {% for post in paginator.posts %}
+{{post.categories}}
 {% if post.categories contains 'Android Game Programming' %}
 
 <article id="post-25" class="post-25 post type-post status-publish format-standard has-post-thumbnail">
