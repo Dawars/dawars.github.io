@@ -2,8 +2,8 @@
 title: 0. Bemutatkozás
 date: 2016-08-21T23:08:41+00:00
 author: dawars
-layout: default
-categories: [Android Game Programming]
+categories: ["Android Game Programming"]
+
 ---
 Az első szakkörön bemutatkozás lesz, időpontegyeztetés és információk a szakkörre vonatkozóan.
 
