@@ -1,11 +1,9 @@
 ---
-id: 332
 title: 11. Canvas és rajzolás a képernyőre
 date: 2016-12-10T17:47:51+00:00
 author: dawars
-layout: post
-guid: https://dawars.me/?p=332
-permalink: /index.php/2016/12/10/11-canvas-es-rajzolas-kepernyore/
+layout: default
+categories: [Android Game Programming]
 ---
 A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
 

@@ -1,11 +1,9 @@
 ---
-id: 278
 title: 5. Függvények
 date: 2016-11-11T13:19:03+00:00
 author: dawars
-layout: post
-guid: https://dawars.me/?p=278
-permalink: /index.php/2016/11/11/5-fuggvenyek/
+layout: default
+categories: [Android Game Programming]
 ---
 Ezen az órán a függvényekkel, a rekurzióval és a debuggolással ismerkedtünk meg. Az órán írt kódok kommentekkel kiegészítve (és a 4. házi megoldása) a szokásos GitHub repository-ban érhető el:
   

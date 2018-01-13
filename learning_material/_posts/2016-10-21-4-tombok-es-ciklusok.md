@@ -1,11 +1,9 @@
 ---
-id: 256
 title: 4. Tömbök és ciklusok gyakorlása
 date: 2016-10-21T22:50:25+00:00
 author: dawars
-layout: post
-guid: https://dawars.me/?p=256
-permalink: /index.php/2016/10/21/4-tombok-es-ciklusok/
+layout: default
+categories: [Android Game Programming]
 ---
 ## Stringek
 

@@ -1,11 +1,9 @@
 ---
-id: 248
 title: 3. Változók és ciklusok
 date: 2016-10-14T21:53:44+00:00
 author: dawars
-layout: post
-guid: https://dawars.me/?p=248
-permalink: /index.php/2016/10/14/3-valtozok-es-ciklusok/
+layout: default
+categories: [Android Game Programming]
 ---
 A mai órán többnyire a CodeCamp 1. Java Intro részt néztük meg.
 
