@@ -3,6 +3,7 @@ title: 5. Függvények
 date: 2016-11-11T13:19:03+00:00
 author: dawars
 categories: [Android Game Programming]
+hidden: true
 ---
 Ezen az órán a függvényekkel, a rekurzióval és a debuggolással ismerkedtünk meg. Az órán írt kódok kommentekkel kiegészítve (és a 4. házi megoldása) a szokásos GitHub repository-ban érhető el:
   

@@ -3,6 +3,7 @@ title: 3. Változók és ciklusok
 date: 2016-10-14T21:53:44+00:00
 author: dawars
 categories: [Android Game Programming]
+hidden: true
 ---
 A mai órán többnyire a CodeCamp 1. Java Intro részt néztük meg.
 
