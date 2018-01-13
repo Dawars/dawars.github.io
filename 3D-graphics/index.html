@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Android Game Programming
+title: 3D Graphics
 ---
-{% for post in site.categories.android-game-programming%}
+{% for post in site.categories.3D-graphics %}
 
 <article id="post-25" class="post-25 post type-post status-publish format-standard has-post-thumbnail">
-    <!--<img width="750" height="571" src="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg" class="attachment-featured size-featured wp-post-image" alt="" srcset="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg 750w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-300x228.jpg 300w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-1024x780.jpg 1024w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle.jpg 1050w" sizes="(max-width: 750px) 100vw, 750px"> -->
+    <!--cover<img width="750" height="571" src="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg" class="attachment-featured size-featured wp-post-image" alt="" srcset="https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-750x571.jpg 750w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-300x228.jpg 300w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle-1024x780.jpg 1024w, https://demo.wpmultiverse.com/franklin/wp-content/uploads/sites/2/2014/11/shuttle.jpg 1050w" sizes="(max-width: 750px) 100vw, 750px"> -->
     <h3 class="post-title"><a href="{{ post.url }}" rel="bookmark">{{ post.title }}</a></h3>
 
     {{ post.excerpt }}
@@ -35,6 +35,7 @@ title: Android Game Programming
 
 </article>
 <hr class="post-divider">
+<!--{% endif %}-->
 {% endfor %} {% if paginator.total_pages > 1 %}
 <div class="page-links">
     {% if paginator.previous_page %}
