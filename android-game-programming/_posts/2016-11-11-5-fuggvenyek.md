@@ -19,65 +19,47 @@ Vegyük a következő példát: Javaban nincsen külön művelet a hatványozás
 
 Először írjunk egy kódrészletet, ami kiszámolja a $latex base^n $ eredményét.
 
-> A hatványozás az a művelet, ahol a _base-_t _n_-szer összeszorozzuk. Pl: $latex 2^3 = 2\*2\*2 = 8$
+> A hatványozás az a művelet, ahol a _base_ -t _n_ -szer összeszorozzuk. Pl: $$ 2^3 = 2\*2\*2 = 8 $$
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 double base = 2;
-  
 int n = 3;
-  
-//&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
-  
+
+//—————————-
+
 double result = 1; // eredmény
-  
 for(int i = 0; i < n; i++)
-      
-result = result * base;
-  
-//&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;-
-  
+    result = result * base;
+
+//—————————-
+
 System.out.println(result); // Kiírja, hogy 8
-  
-[/code]
+```
 
 (Remélem) látjuk, hogy ezt felesleges és fárasztó lenne minden alkalommal kiírni.
 
 Most ezt alakítsuk át egy egyszerű függvénnyé:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 // a static kulcsszóról következő órán beszélünk, csak ezért raktam zárójelbe
   
 /**
-   
 * Hatványozó függvény
-   
 *
-   
 * double base &#8211; hatványalap
-   
 * double n &#8211; hatványkitevő, hányszor szorozzuk össze a base-t
-   
 * @return base ^ n
-   
 */
-  
 (static) double hatvanyozas(double base, int n){
-      
-// kód
-      
-double result = 1; // eredmény
-      
-for(int i = 0; i < n; i++)
-          
-result = result * base;
-      
-return result; // a függvény eredménye, a visszatérési érték
-  
+
+    // kód
+    double result = 1; // eredmény
+    for(int i = 0; i < n; i++)
+        result = result * base;
+
+    return result; // a függvény eredménye, a visszatérési érték
 }
-  
-[/code]
+```
 
 Először vizsgáljuk meg az első sort. A _double_ a visszatérési érték típusa, vagyis megmondja, hogy mit várunk a hatványozástól (egy valós számot várunk).
 
@@ -93,11 +75,9 @@ Vegyük észre, hogy a függvénybe nem adtuk meg a _konkrét értékeket_, amit
 
 Most úgy tudjuk kiszámolni a $latex 2^3$-at, hogy meghívjuk a <span style="text-decoration: underline;">hatvanyozas</span> nevű függvényünket:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 double eredmeny = hatvanyozas(2, 3);
-  
-[/code]
+```
 
 Ilyenkor a program &#8220;átugrik&#8221; a függvényünk elejére és sorban átadja a függvénynek a megadott paramétereket. Tehát a (2, 3)-at a (base, n)-nek. Majd a függvént végén (vagy a _return_ hívásakor) a program visszaugrik a hívás helyére és **visszatér** a return-ba írt értékkel.
 
@@ -105,32 +85,21 @@ A futtatás után ha kiiratjuk az _eredmeny_ változó értékét megkapjuk a 8-
 
 Nézzük a teljes kódot:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 /**
-   
 * Hatványozó függvény
-   
 *
-   
 * @param base &#8211; hatványalap
-   
 * @param n &#8211; hatványkitevő
-   
-\* @return base ^ n = base \* base &#8230; * base
-   
+* @return base ^ n = base * base … * base
 */
-  
 static double hatvany(double base, int n) {
-      
-double res = 1;
-      
-for (int i = 0; i < n; i++)
-          
-res = res * base;
-      
-return res;
-  
+    double res = 1;
+
+    for (int i = 0; i < n; i++)
+        res = res * base;
+
+    return res;
 }
 
 // a main függvényben:
@@ -139,7 +108,7 @@ double eredmeny = hatvanyozas(2, 3);
   
 System.out.println(eredmeny);
   
-[/code]
+```
 
 ## Rekurzió
 

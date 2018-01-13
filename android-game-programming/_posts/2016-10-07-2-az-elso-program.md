@@ -5,27 +5,22 @@ author: dawars
 categories: [Android Game Programming]
 hidden: true
 ---
-Mint általában, most is az első programunk a Hello World lesz, ami csak annyit csinál, hogy kiírja a Parancssorba, hogy &#8220;Hello World&#8221;.
+Mint általában, most is az első programunk a Hello World lesz, ami csak annyit csinál, hogy kiírja a Parancssorba, hogy "Hello World".
 
 > Ajánlott szövegszerkesztő: Notepad++ vagy Atom
 
 Hozzunk létre egy Hello.java nevű file-t és írjuk bele az alábbi kódot (Fontos, hogy a file neve és a class utan levő név egyezzen):
 
-[code lang=&#8221;java&#8221;]
+```java
   
 // Hello.java
-  
 class Hello {
-      
-public static void main(String[] args){
-          
-System.out.println("Hello world");
-      
+    public static void main(String[] args){
+        System.out.println("Hello world");
+    }
 }
-  
-}
-  
-[/code]
+```
+<!--more-->
 
 Én az asztalra mentettem, ezért nekem az elérési út _C:\Users\dawar\Desktop_.
 
@@ -37,11 +32,11 @@ Nyissuk meg a Command Prompt-ot és navigáljunk a Hello.java mappájába
 
 Ahhoz, hogy ezt lefordítsuk a gép által futtatható nyelvre, meg kell adnunk a javac-nek (Java Compiler) a file-t:
 
-&#8220;javac Hello.java&#8221;
+"javac Hello.java"
 
 Ha nem ír hibát, akkor létrejött egy Hello.class file, amit már tudunk futtatni a JavaVM-ben a
 
-&#8220;java Hello&#8221; commanddal.
+"java Hello" commanddal.
 
 Látjuk, hogy kiírta, hogy Hello world, sikerült az első programunk!
 
@@ -51,7 +46,7 @@ Ez elég bonyolult egy program futtatásához és csak bonyolodni fog ezért mos
 
 Nyissuk is meg tehát az IntelliJ-t és hozzunk létre egy új projectet HelloWorld néven.
 
-Ha nincs alapból beállítva a JDK, akkor először hozzá kell adnun. Ehhez kattintsatok a New->JDK és keressétek meg a Java telepítési helyét, pl: _C:\Program Files\Java\jdk1.8.0_*_
+Ha nincs alapból beállítva a JDK, akkor először hozzá kell adnun. Ehhez kattintsatok a New->JDK és keressétek meg a Java telepítési helyét, pl: _C:\Program Files\Java\jdk1.8.0\_*_
 
 <div style="width: 834px" class="wp-caption aligncenter">
   <a href="https://dawars.me/wp-content/uploads/2016/10/2_select_jdk.png"><img src="//dawars.me/wp-content/uploads/2016/10/2_select_jdk.png" width="824" height="773" /></a>
@@ -67,7 +62,7 @@ Next, next, majd ha mindent jól csináltál, egy ilyen ablak jelenik:
 
 Az _src_ mappában hozzunk létre egy új class-t, mint ahogy az előző oldalon csináltuk:
 
-[code lang=&#8221;java&#8221;]
+```java
   
 // Hello.java
   
@@ -81,7 +76,7 @@ System.out.println("Hello world");
   
 }
   
-[/code]
+```
 
 (Egyszerűen elindítani úgy lehet, hogy a class névre jobb gombbal rákattintotok és a Run ClassName.java opcióra mentek )
 

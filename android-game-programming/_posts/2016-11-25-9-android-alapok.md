@@ -7,4 +7,4 @@ hidden: true
 ---
 A szakkörön készítettünk egy képernyőt (Activity), ahol egy gomb (Button), szövegbeviteli mező (EditText).
 
-Ezekhez _listener_t hasznaltunk, ami a gomb megnyomásakor meghívta a kódunkat.
+Ezekhez _listener_ -t hasznaltunk, ami a gomb megnyomásakor meghívta a kódunkat.

@@ -11,25 +11,20 @@ A String egy olyan <span style="text-decoration: underline;">referencia</span> 
 
 A Stringeken leggyakrabban a az _összefűzés_ (concatenate) műveletet használjuk, amit &#8220;összead&#8221; vagyis egymás után rak két Stringet.
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 String text = "Hello";
-  
 System.out.println(text + " World!");
-  
-[/code]
+```
 
 Egy másik fontos metódus a _length()_, ami megadja a String hosszát. Ezen kívül még van sok más is, de egyelőre ezekkel nem foglalkozunk.
 
 <!--more-->
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 String text = "Hello";
   
 System.out.println(text.length());
-  
-[/code]
+```
 
 ## Tömbök
 
@@ -37,16 +32,14 @@ A tömböket úgy érdemes feldogni, mint egy változó (egy névvel azonosíth
 
 Elősször nézzük meg, hogyan tudunk tömböket létrehozni:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 // int tömb, értékek megadásával
   
 int[] fibonacci = new int[]{ 1, 1, 2, 3, 5, 8 };
   
-[/code]
+```
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 // mérettel megadás, 6 hosszú
   
 int[] fibonacci = new int[6];
@@ -61,7 +54,8 @@ fibonacci[3] = 3;
   
 fibonacci[4] = 5;
   
-fibonacci[5] = 8; // az 5 az utolsó index, mert 0-tól kezdjük a számozást [/code]
+fibonacci[5] = 8; // az 5 az utolsó index, mert 0-tól kezdjük a számozást
+```
 
 Egy tömb hosszát a tombNev.length -el tudjuk lekérdezni.
 
@@ -71,19 +65,14 @@ Alapvetően két fontos ciklus van a Javaban, a _for_ és a _while_ ciklus.
 
 A while az  egyszerűbb, amíg teljesül a <span style="text-decoration: underline;">feltétel</span>, addig végrehajtja az <span style="text-decoration: underline;">utasításokat</span>:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 while (feltétel) {
-      
-Utasítás1;
-      
-…
-      
-UtasításN;
+    Utasítás1;
+    …
+    UtasításN;
   
 }
-  
-[/code]
+```
 
 Ezt folyamdiagrammal így lehetne szemléltetni:
   
@@ -93,20 +82,18 @@ Ezt folyamdiagrammal így lehetne szemléltetni:
 
 Ennek egy változata a _hátultesztelős_ ciklus, ami végrehajtja az utasításokat, és amíg teljesül a feltétel, addig újra és újra végrehajtja.
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 do {
       
-Utasítás1;
-      
-…
-      
-UtasításN;
+    Utasítás1;
+
+    …
+
+    UtasításN;
   
 } while (feltétel);
   
-[/code]
-
+```
 [<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png" alt="" width="355" height="335" />](https://dawars.me/wp-content/uploads/2016/10/4_do_while_loop.png)
 
 ## For ciklus
@@ -119,19 +106,13 @@ A for utáni zárójelben három dolog van:
   * Ami a feltétel, hogy folytassa a futtatást;
   * Amit minden futás után meg kell csinálni)
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 for (inicializálás; feltétel; inkrementálás) {
-      
-Utasítás1;
-      
-…
-      
-UtasításN;
-  
+    Utasítás1;
+    …
+    UtasításN;
 }
-  
-[/code]
+```
 
 [<img class="aligncenter " src="//dawars.me/wp-content/uploads/2016/10/4_for_loop.png" alt="" width="355" height="349" />](https://dawars.me/wp-content/uploads/2016/10/4_for_loop.png)
 
@@ -139,65 +120,46 @@ Gyakran előfordul, hogy végig szeretnénk menni egy tömb összes elemén és 
 
 Erre a _for_ ciklus a legkézenfekvőbb, írjuk ki a tömb összes elemét:
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 for (int i = 0; i < tombNev.length; i++) {
-      
-System.out.println(tombNev[i]);
-  
+    System.out.println(tombNev[i]);
 }
-  
-[/code]
+```
 
 ## Foreach ciklus
 
 A foreach ciklus egy még tovább egyszerűsített ciklus, egy tömböt vagy kollekciót (hamarosan&#8230;) tudunk vele bejárni, de a sima for ciklussal szemben elveszítjük az (init, feltétel, inkrement) hármas módosításának lehetőségét.
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 // for (valtozótípus név : tömbnév)
-  
 for (int szam : fibonacci) {
-      
-System.out.println(szam);
-  
+    System.out.println(szam);
 }
-  
-[/code]
+```
 
 ## Break, continue
 
 Ha egy cikluson belül kiadjuk a <span style="text-decoration: underline;">break;</span> utasítást, akkor a program kilép a _legbelső_ ciklusból, és onnan folytatja tovább.
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 for (int i = 0; i < 10; i++) {
-      
-if (i == 5) break;
-      
-System.out.print(i + ",");
-  
+    if (i == 5) break;
+    System.out.print(i + ",");
 }
   
 // Output: 0, 1, 2, 3, 4,
-  
-[/code]
+```
 
 Ha a <span style="text-decoration: underline;">continue;</span> utasítást használjuk, akkor a program kihagyja a ciklus hátralévő részét és a következő ciklusfutás elején <span style="text-decoration: underline;">folytatja</span>.
 
-[code lang=&#8221;java&#8221;]
-  
+```java
 for (int i = 0; i < 10; i++) {
-      
-if (i % 2 == 0) continue;
-      
-System.out.print(i + ",");
-  
+    if (i % 2 == 0) continue;
+    System.out.print(i + ",");
 }
   
 // Output: 1, 3, 5, 7, 9
-  
-[/code]
+```
 
 # Feladatok
 

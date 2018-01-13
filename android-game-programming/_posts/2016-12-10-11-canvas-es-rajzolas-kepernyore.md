@@ -2,7 +2,6 @@
 title: 11. Canvas és rajzolás a képernyőre
 date: 2016-12-10T17:47:51+00:00
 author: dawars
-categories: [Android Game Programming]
 hidden: true
 ---
 A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
@@ -19,7 +18,7 @@ A mai szakkörön a képernyőre rajzolással ismerkedtünk meg.
 
 ## View
 
-Ahhoz, hogy a képernyőre rajzolhassunk, szükségünk lesz egy saját View classra (mint pl a Button vagy a TextView). A _SurfaceView _biztosítja nekünk a hozzáférést a View Canvas objektumához, amit aztán az Android megjelenít az Activity-ben a View helyén. Ezért ezt az osztályt kiegészítjük (extend) és csinálunk egy MyView class-t.
+Ahhoz, hogy a képernyőre rajzolhassunk, szükségünk lesz egy saját View classra (mint pl a Button vagy a TextView). A _SurfaceView_ biztosítja nekünk a hozzáférést a View Canvas objektumához, amit aztán az Android megjelenít az Activity-ben a View helyén. Ezért ezt az osztályt kiegészítjük (extend) és csinálunk egy MyView class-t.
 
 <div style="width: 331px" class="wp-caption aligncenter">
   <a href="https://dawars.me/wp-content/uploads/2016/12/canvas_layout.png"><img class="size-medium" src="//dawars.me/wp-content/uploads/2016/12/canvas_layout.png" alt="Layout" width="321" height="539" /></a>
