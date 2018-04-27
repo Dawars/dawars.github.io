@@ -1,0 +1,10 @@
+---
+title: 7. OBJ modellek és shader gyakorlás
+date: 2018-04-27
+author: dawars
+hidden: true
+---
+
+<div class="video-container">
+<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vR00NdRQN7sqc8IqwkTvQsLhr12RlOFrW9pGdC7deAI9GXhFE_lGDMOoUneN41lEuNJtvhsHNl6uA25/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+</div>
