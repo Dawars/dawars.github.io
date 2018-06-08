@@ -73,7 +73,7 @@ So far, so good. But what about this one?
   And there are even some collaborations between Japanese and non-Japanese studios like The King Kong Show, The Mysterious Cities of Gold, Ulysse 31, etc.
 </p>
 
-### Difficulties {#e168.graf.graf--h3.graf-after--p}
+### Difficulties
 
 <p id="ddb0" class="graf graf--p graf-after--h3">
   An animated film has a lot of components that combined make up a whole: visual style, quality of animation, the themes (human bonds, afterlife, etc.), the music, the characters, the plot and so on…
@@ -87,7 +87,7 @@ So far, so good. But what about this one?
   In addition, anime itself has different animation styles, so we cannot talk about one anime style but several.
 </p>
 
-### Solution {#363b.graf.graf--h3.graf-after--p}
+### Solution
 
 <p id="b5b7" class="graf graf--p graf-after--h3">
   A more inclusive definition could be whether something <em class="markup--em markup--p-em">looks like</em> anime or not. This is problematic, because it’s a highly subjective factor, but by introducing an independent third-party this can be solved as well.
