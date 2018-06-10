@@ -25,10 +25,6 @@ function start(Module) {
     renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
     container.appendChild(renderer.domElement);
 
-    controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.target.set(0, 0, 0);
-    controls.update();
-    controls.addEventListener('change', draw);
 
     scene = new THREE.Scene();
     scene.background = new THREE.Color(0x050505);
@@ -112,6 +108,11 @@ function start(Module) {
             stats.update();
         }
 
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.target.set(0, 0, 0);
+        controls.update();
+        // controls.addEventListener('change', draw);
+
         draw();
     } catch (e) {
         console.log(e);
@@ -144,19 +145,19 @@ function start(Module) {
             shapeBlendShape10: 0,
         };
         gui = new dat.GUI();
-        gui.width = 400;
+        // gui.width = 400;
         let folder = gui.addFolder('Shape BlendShapes');
 
-        folder.add(params, 'shapeBlendShape1', -10, 10).name('Shape BlendShape 1').step(0.01).onChange(function (value) {  shapePData[0] = value; });
-        folder.add(params, 'shapeBlendShape2', -10, 10).name('Shape BlendShape 2').step(0.01).onChange(function (value) {  shapePData[1] = value; });
-        folder.add(params, 'shapeBlendShape3', -10, 10).name('Shape BlendShape 3').step(0.01).onChange(function (value) {  shapePData[2] = value; });
-        folder.add(params, 'shapeBlendShape4', -10, 10).name('Shape BlendShape 4').step(0.01).onChange(function (value) {  shapePData[3] = value; });
-        folder.add(params, 'shapeBlendShape5', -10, 10).name('Shape BlendShape 5').step(0.01).onChange(function (value) {  shapePData[4] = value; });
-        folder.add(params, 'shapeBlendShape6', -10, 10).name('Shape BlendShape 6').step(0.01).onChange(function (value) {  shapePData[5] = value; });
-        folder.add(params, 'shapeBlendShape7', -10, 10).name('Shape BlendShape 7').step(0.01).onChange(function (value) {  shapePData[6] = value; });
-        folder.add(params, 'shapeBlendShape8', -10, 10).name('Shape BlendShape 8').step(0.01).onChange(function (value) {  shapePData[7] = value; });
-        folder.add(params, 'shapeBlendShape9', -10, 10).name('Shape BlendShape 9').step(0.01).onChange(function (value) {  shapePData[8] = value; });
-        folder.add(params, 'shapeBlendShape10', -10, 10).name('Shape BlendShape 10').step(0.01).onChange(function (value) {shapePData[9] = value; });
+        folder.add(params, 'shapeBlendShape1', -10, 10).name('Shape 1').step(0.01).onChange(function (value) {  shapePData[0] = value; });
+        folder.add(params, 'shapeBlendShape2', -10, 10).name('Shape 2').step(0.01).onChange(function (value) {  shapePData[1] = value; });
+        folder.add(params, 'shapeBlendShape3', -10, 10).name('Shape 3').step(0.01).onChange(function (value) {  shapePData[2] = value; });
+        folder.add(params, 'shapeBlendShape4', -10, 10).name('Shape 4').step(0.01).onChange(function (value) {  shapePData[3] = value; });
+        folder.add(params, 'shapeBlendShape5', -10, 10).name('Shape 5').step(0.01).onChange(function (value) {  shapePData[4] = value; });
+        folder.add(params, 'shapeBlendShape6', -10, 10).name('Shape 6').step(0.01).onChange(function (value) {  shapePData[5] = value; });
+        folder.add(params, 'shapeBlendShape7', -10, 10).name('Shape 7').step(0.01).onChange(function (value) {  shapePData[6] = value; });
+        folder.add(params, 'shapeBlendShape8', -10, 10).name('Shape 8').step(0.01).onChange(function (value) {  shapePData[7] = value; });
+        folder.add(params, 'shapeBlendShape9', -10, 10).name('Shape 9').step(0.01).onChange(function (value) {  shapePData[8] = value; });
+        folder.add(params, 'shapeBlendShape10', -10, 10).name('Shape 10').step(0.01).onChange(function (value) {shapePData[9] = value; });
         folder.open();
     }
 }

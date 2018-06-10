@@ -17,15 +17,245 @@
 
     <title>Hand viewer</title>
 </head>
-<body onload="StartModule().then(start)">
-<script src="resources/three.js"></script>
-<script src="resources/Detector.js"></script>
-<script src="resources/libs/stats.min.js"></script>
-<script src="resources/libs/dat.gui.min.js"></script>
-<script src="resources/libs/inflate.min.js"></script>
-<script src="resources/controls/OrbitControls.js"></script>
-<script src="resources/script.js"></script>
-<script data-cfasync="false" async type="text/javascript" src="HandVR.js"></script>
+<body>
+<script src="js/three.min.js"></script>
+<script src="js/Detector.js"></script>
+<script src="js/libs/stats.min.js"></script>
+<script src="js/libs/dat.gui.min.js"></script>
+<script src="js/libs/inflate.min.js"></script>
+<script src="js/controls/OrbitControls.js"></script>
+<script data-cfasync="false" async src="mano_cpp.js"></script>
+<script>
+
+    window.onload = function () {
+        Mano().then(init);
+    };
+
+    let SCREEN_WIDTH = window.innerWidth;
+    let SCREEN_HEIGHT = window.innerHeight;
+    let container, stats, controls;
+    let camera, scene, renderer;
+
+    let gui;
+    let clock = new THREE.Clock();
+
+    let manoMesh;
+
+
+    function init(Module) {
+        if (!Detector.webgl) Detector.addGetWebGLMessage();
+
+        container = document.createElement('div');
+        document.body.appendChild(container);
+
+        camera = new THREE.PerspectiveCamera(40, SCREEN_WIDTH / SCREEN_HEIGHT, 1, 1000);
+        camera.position.y = 150;
+        camera.zoom = 2;
+        camera.updateProjectionMatrix();
+
+        // renderer
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setPixelRatio(window.devicePixelRatio);
+        renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+        container.appendChild(renderer.domElement);
+
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x050505);
+
+        let gridHelper = new THREE.GridHelper(10, 10);
+        scene.add(gridHelper);
+
+        // mano params
+        initGui();
+
+        let vertHeap;
+        let shapeHeap;
+
+        let geometry = new THREE.BufferGeometry();
+
+
+        let ambientLight = new THREE.AmbientLight(0x222222);
+        scene.add(ambientLight);
+        let light1 = new THREE.DirectionalLight(0xffffff, 0.5);
+        light1.position.set(1, -1, 1);
+        scene.add(light1);
+        let light2 = new THREE.DirectionalLight(0xffffff, 1);
+        light2.position.set(0, 1, 0);
+        scene.add(light2);
+
+        let material = new THREE.MeshStandardMaterial({color: 0xff5500, flatShading: true, side: THREE.DoubleSide});
+
+
+        let posePData = new Float32Array(135); // 15*3
+        let posePSize = posePData.length * posePData.BYTES_PER_ELEMENT;
+        let posePPtr = Module._malloc(posePSize);
+        shapeHeap = new Uint8Array(Module.HEAPU8.buffer, posePPtr, posePSize);
+
+        let shapePData = new Float32Array(10);
+        let shapePSize = shapePData.length * shapePData.BYTES_PER_ELEMENT;
+        let shapePPtr = Module._malloc(shapePSize);
+        shapeHeap = new Uint8Array(Module.HEAPU8.buffer, shapePPtr, shapePSize);
+
+
+        try {
+
+            //The vertex coordinates
+            let numVertices = Module.ccall("getNumVertices", ["number"], [], []);
+
+            let vertData = new Float32Array(numVertices * 3);
+            let dataLength = vertData.length * vertData.BYTES_PER_ELEMENT;
+            let vertBufferPtr = Module._malloc(dataLength);
+
+            geometry.addAttribute("position", new THREE.BufferAttribute(vertData, 3));
+
+
+            // index buffer
+            let indexPtr = Module.ccall("getIndexBuffer", ["number"], ["number"], []);
+            let indexSize = Module.ccall("getIndexBufferSize", ["number"], ["number"], []);
+
+            let indexBuffer = new Uint16Array(Module.HEAPU8.buffer, indexPtr, indexSize);
+
+            geometry.setIndex(new THREE.BufferAttribute(indexBuffer, 1));
+
+            function refreshGeometry() {
+
+                /*vertHeap = new Uint8Array(Module.HEAPU8.buffer, ptr, dataLength);
+                vertHeap.set(new Uint8Array(vertData.buffer));
+                shapePHeap.set(new Uint8Array(shapePData.buffer));*/
+                shapeHeap.set(new Uint8Array(shapePData.buffer));
+                //vertHeap.set(new Uint8Array(vertData.buffer));
+
+                // vert
+                Module.ccall("calcHandVertices", null, ["number", "number", "number"], [vertBufferPtr, shapePPtr, posePPtr]);
+                // todo wrap functions
+
+                vertHeap = new Uint8Array(Module.HEAPU8.buffer, vertBufferPtr, dataLength); // get region from wasm heap
+                vertData = new Float32Array(vertHeap.buffer, vertHeap.byteOffset, numVertices * 3);
+
+                geometry.attributes.position.array.set(vertData);
+                geometry.attributes.position.needsUpdate = true;
+
+            }
+
+            refreshGeometry();
+
+
+            manoMesh = new THREE.Mesh(geometry, material);
+            scene.add(manoMesh);
+
+            window.addEventListener('resize', onWindowResize, false);
+
+            // stats
+            stats = new Stats();
+            container.appendChild(stats.dom);
+
+            function draw() {
+                requestAnimationFrame(draw);
+
+                renderer.clear();
+                renderer.render(scene, camera);
+                stats.update();
+            }
+
+            controls = new THREE.OrbitControls(camera, renderer.domElement);
+            controls.target.set(0, 0, 0);
+            controls.update();
+            // controls.addEventListener('change', draw);
+
+            draw();
+        } catch (e) {
+            console.log(e);
+        } finally {
+            Module._free(shapeHeap.byteOffset);
+            Module._free(vertHeap.byteOffset);
+        }
+
+
+        function onWindowResize(event) {
+            SCREEN_WIDTH = window.innerWidth;
+            SCREEN_HEIGHT = window.innerHeight;
+            renderer.setSize(SCREEN_WIDTH, SCREEN_HEIGHT);
+            camera.aspect = SCREEN_WIDTH / SCREEN_HEIGHT;
+            camera.updateProjectionMatrix();
+        }
+
+        function initGui() {
+
+            let ManoParams = function () {
+                this.shapeBlendShape1 = 0;
+                this.shapeBlendShape2 = 0;
+                this.shapeBlendShape3 = 0;
+                this.shapeBlendShape4 = 0;
+                this.shapeBlendShape5 = 0;
+                this.shapeBlendShape6 = 0;
+                this.shapeBlendShape7 = 0;
+                this.shapeBlendShape8 = 0;
+                this.shapeBlendShape9 = 0;
+                this.shapeBlendShape10 = 0;
+                // this.anim = false;
+            };
+
+
+            let manoParams = new ManoParams;
+
+            gui = new dat.GUI();
+            let folder = gui.addFolder('Shape BlendShapes');
+
+            folder.add(manoParams, 'shapeBlendShape1', -10, 10).name('Shape 1').step(0.01).onChange(function (value) {
+                shapePData[0] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape2', -10, 10).name('Shape 2').step(0.01).onChange(function (value) {
+                shapePData[1] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape3', -10, 10).name('Shape 3').step(0.01).onChange(function (value) {
+                shapePData[2] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape4', -10, 10).name('Shape 4').step(0.01).onChange(function (value) {
+                shapePData[3] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape5', -10, 10).name('Shape 5').step(0.01).onChange(function (value) {
+                shapePData[4] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape6', -10, 10).name('Shape 6').step(0.01).onChange(function (value) {
+                shapePData[5] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape7', -10, 10).name('Shape 7').step(0.01).onChange(function (value) {
+                shapePData[6] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape8', -10, 10).name('Shape 8').step(0.01).onChange(function (value) {
+                shapePData[7] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape9', -10, 10).name('Shape 9').step(0.01).onChange(function (value) {
+                shapePData[8] = value;
+                refreshGeometry();
+            });
+            folder.add(manoParams, 'shapeBlendShape10', -10, 10).name('Shape 10').step(0.01).onChange(function (value) {
+                shapePData[9] = value;
+                refreshGeometry();
+            });
+/*
+            folder.add(manoParams, 'anim').name('Animate shape').onChange(function (value) {
+            });*/
+
+
+            // todo reset
+            // todo anim PCA components
+            // todo leap motion, toggle pose or corrective blend shapes only (copy with no pose?)
+            folder.open();
+
+            // gui.remember(manoParams);
+        }
+    }
+</script>
 
 </body>
 </html>
