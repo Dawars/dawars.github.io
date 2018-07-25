@@ -161,7 +161,7 @@
         // wrap functions to Mano and call init
 
         Mano.getNumVertices = Module.cwrap("getNumVertices", ["number"], []);
-        Mano.getNumJoints = Module.cwrap("getNumJoints", ["number"], []);
+        // Mano.getNumJoints = Module.cwrap("getNumJoints", ["number"], []);
         Mano.getNumPoseParams = Module.cwrap("getNumPoseParams",["number"],[]);
 
         Mano.calcHandVertices = Module.cwrap('calcHandVertices', null, ['number', 'number', 'number']);
@@ -169,10 +169,10 @@
         Mano.getIndexBuffer = Module.cwrap("getIndexBuffer", ["number"], []);
         Mano.getIndexBufferSize = Module.cwrap("getIndexBufferSize", ["number"], []);
 
-        Mano.getWeightIndices = Module.cwrap("getWeightIndices", ["number"], []);
-        Mano.getBlendWeights = Module.cwrap("getBlendWeights", ["number"], []);
-        Mano.getJointLocations = Module.cwrap("getJointLocations",["number"],[]);
-        Mano.getJointRotation = Module.cwrap("getJointRotation",["number"],[]);
+        // Mano.getWeightIndices = Module.cwrap("getWeightIndices", ["number"], []);
+        // Mano.getBlendWeights = Module.cwrap("getBlendWeights", ["number"], []);
+        // Mano.getJointLocations = Module.cwrap("getJointLocations",["number"],[]);
+        // Mano.getJointRotation = Module.cwrap("getJointRotation",["number"],[]);
 
         Mano.malloc = Module._malloc;
         Mano.free = Module._free;
