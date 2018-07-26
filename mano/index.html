@@ -17,7 +17,7 @@
 
     <meta charset="utf-8"/>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <meta name="viewport" content="width=360, user-scalable=no, initial-scale=1.0" />
 
     <meta name="twitter:card" content="summary_large_image"/>
     <meta name="twitter:creator" content="@dawars00"/>
@@ -50,14 +50,6 @@
             background-color: #000;
             width: 100%;
             height: 100%;
-        }
-
-        #container {
-            position: absolute;
-            left: 0;
-            top: 0;
-            right: 0;
-            bottom: 0;
         }
 
         #options {
@@ -112,7 +104,11 @@
             #options {
                 display: none;
             }
-
+        }
+        @media (max-width: 1000px) {
+            #options {
+                display: none;
+            }
         }
     </style>
 
@@ -164,8 +160,8 @@
     <script src="js/Detector.js"></script>
     <!--<script src="js/libs/stats.min.js"></script>-->
     <script src="js/libs/dat.gui.min.js"></script>
-    <script src="js/controls/OrbitControls.js"></script>
-    <script data-cfasync="false" async src="mano_cpp.js"></script>
+    <script src="js/controls/OrbitControls.min.js"></script>
+    <script data-cfasync="false" async src="mano_cpp.min.js"></script>
     <script>
 
         // init without WASM
