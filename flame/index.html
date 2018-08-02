@@ -395,7 +395,7 @@
                     let dt = clock.getElapsedTime();
 
                     let val = Math.sin(dt * 3. / 2.) * 10.;
-                    manoParams.expBlendShape1 = val;
+                    manoParams.expressionBlendShape1 = val;
                     exprParams[0] = val;
 
                 }
@@ -441,7 +441,7 @@
                     // doesn't get called via listen() - when setting variable
                     shapeParams[0] = value;
                     manoParams.anim = false;
-                }).listen();
+                });
                 folder.add(manoParams, 'shapeBlendShape2', -10, 10).name('Shape 2').step(0.01).onChange(function (value) {
                     shapeParams[1] = value;
                     manoParams.anim = false;
