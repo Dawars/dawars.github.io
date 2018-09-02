@@ -143,6 +143,12 @@
 .et_monarch .widget_monarchwidget li.et_social_medium { background-color: #25e175 !important; }
 .et_monarch .widget_monarchwidget li.et_social_medium:hover,.et_monarch .widget_monarchwidget .et_social_circle li.et_social_medium:hover i { background-color: #24c46b !important; }
 
+.et_monarch .et_social_patreon, .et_monarch .et_social_patreon, .et_monarch .et_social_networks.et_social_circle .et_social_patreon i { background-color: #25e175; }
+.et_monarch .widget_monarchwidget li.et_social_patreon:hover, .et_monarch li.et_social_patreon:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_patreon:hover i { background-color: #24c46b; }
+.et_monarch .et_social_sidebar_border li.et_social_patreon:hover, .et_monarch .et_social_sidebar_networks_right.et_social_sidebar_border li.et_social_patreon:hover { border-color: #25e175; }
+.et_monarch .widget_monarchwidget li.et_social_patreon { background-color: rgb(249, 104, 84) !important; }
+.et_monarch .widget_monarchwidget li.et_social_patreon:hover,.et_monarch .widget_monarchwidget .et_social_circle li.et_social_patreon:hover i { background-color: rgb(255, 91, 70) !important; }
+
 .et_monarch .et_social_twitter, .et_monarch .et_social_twitter, .et_monarch .et_social_networks.et_social_circle .et_social_twitter i { background-color: #00abf0; }
 .et_monarch .widget_monarchwidget li.et_social_twitter:hover, .et_monarch li.et_social_twitter:hover, .et_monarch .et_social_networks.et_social_circle li.et_social_twitter:hover i { background-color: #0092cc; }
 .et_monarch .et_social_sidebar_border li.et_social_twitter:hover, .et_monarch .et_social_sidebar_networks_right.et_social_sidebar_border li.et_social_twitter:hover { border-color: #00abf0; }
