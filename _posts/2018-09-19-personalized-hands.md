@@ -41,7 +41,9 @@ Recent advancements in Artificial Intelligence made it possible to take personal
 <h2>Online Demo</h2>
 <p>
   Take a look at my interactive demo <a href="/mano/" taget="_blank">here</a>. You can change the shape of the hand by adjusting the sliders on the right.
-Try finding the right parameters for your hand, let's see if you can.😉
+</p>
+<p>
+Try finding the right parameters for your hand, let's see if you can.😉<br/>
 Leave a comment with your results.
 </p>
 <div style="width: 1089px" class="wp-caption aligncenter">
@@ -51,7 +53,7 @@ Leave a comment with your results.
 <h2>The Model</h2>
 <p>As a starting point, I'm using the <a href="http://mano.is.tue.mpg.de" taget="_blank">Mano model</a>. It is a parametric hand model published by the <a href="http://ps.is.tue.mpg.de" taget="_blank">Perceiving Systems Department</a> in Tübingen. 
 </p>
-<p>I'll get into more details in the following article. If you are interested, make sure you've clicked the <i>Follow<i> button next to my name.
+<p>I'll get into more details in the following article. If you are interested, make sure you've clicked the <i>Follow</i> button next to my name.
 </p>
 <p>Researchers from PSD published all the data accompanying their high-quality paper which is still very rare these days. 
 <br/>There is a catch, however. They still use Python 2 and therefore the data is in a Pickle format incompatible for Python 3, that I'm currently using. Furthermore, the structure of the files was "documented" only by an example code. I had to figure out the purpose of each matrix by their dimensions and arbitrary names.
