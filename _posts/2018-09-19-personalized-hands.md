@@ -2,6 +2,8 @@
 title: 'Personalized Hand Models for VR'
 date: 2018-09-19T14:34:15+00:00
 author: dawars
+categories: ["Machine Learning"]
+tags: ["Virtual Reality", "Deep Learning"]
 layout: post
 ---
 <h4>For a truly immersive experience</h4>
