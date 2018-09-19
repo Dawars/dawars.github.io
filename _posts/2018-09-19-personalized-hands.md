@@ -7,7 +7,7 @@ hidden: true
 ---
 <h4>For a truly immersive experience</h4>
 <div style="width: 1089px" class="wp-caption aligncenter">
-  <img class="size-medium" src="//wp-content/uploads/2018/09/hands_shape_banner.png" alt="Hands with different shapes" /></a>
+  <img class="size-medium" src="/wp-content/uploads/2018/09/hands_shape_banner.png" alt="Hands with different shapes" />
 </div>
 <p>
 I've always preferred story-driven games to the competitive ones. When diving into a game like this, one experiences a variety of emotions and may also grow as a person at the end. Despite all that I came to the realization that we might control these characters - our avatars in a way - , but in effect, they have nothing to do with us!
@@ -25,7 +25,7 @@ Seeing someone else's hands move instead of your own feels uncanny and causes co
 However, hands differ in shapes and sizes, so these workarounds only offer partial solutions to the problem.
 </p>
 <div style="width: 1089px" class="wp-caption aligncenter">
-  <img class="size-medium" src="//wp-content/uploads/2016/08/the_gallery_hands.jpg" alt="Hands with different shapes" /></a>
+  <img class="size-medium" src="/wp-content/uploads/2016/08/the_gallery_hands.jpg" alt="Hands with different shapes" /></a>
   <p class="wp-caption-text">Hands in The Gallery - Episode 1: Call of the Starseed  </p>
 </div>
 <p>
@@ -45,7 +45,7 @@ Try finding the right parameters for your hand, let's see if you can.😉
 Leave a comment with your results.
 </p>
 <div style="width: 1089px" class="wp-caption aligncenter">
-  <img class="size-medium" src="//mano/images/banner.png" alt="Deformable hand demo" /></a>
+  <img class="size-medium" src="/mano/images/banner.png" alt="Deformable hand demo" /></a>
   <p class="wp-caption-text">Deformable Hand Demo </p>
 </div>
 <h2>The Model</h2>
@@ -59,7 +59,7 @@ Leave a comment with your results.
 <p>All in all, I came to the conclusion that I needed to export the values as JSON files to maintain cross-compatibility between various programming languages.
 </p>
 <div class="wp-caption alignright">
-<img src="//wp-content/uploads/2018/09/hand_skeleton.gif" alt="Skeleton with Blend Weights"/>
+<img src="/wp-content/uploads/2018/09/hand_skeleton.gif" alt="Skeleton with Blend Weights"/>
 <p class="wp-caption-text">
 Skeleton with Blend Weights</p>
 </div>
@@ -114,4 +114,12 @@ Currently, I'm finishing up cleaning the training data and starting to train a n
 ---
 If you liked this article, follow me on medium and follow me on social media.
 Never miss anything! I write about the intersection of Machine Learning and Computer Graphics.
-<div class="section-inner sectionLayout--outsetRow" data-paragraph-count="2"><figure tabindex="0" contenteditable="false" name="7995" class="graf graf--figure graf--layoutOutsetRow is-defaultValue is-partialWidth graf-after--p" style="width: 50%;"><div class="aspectRatioPlaceholder is-locked"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 25%;"></div><a href="https://medium.com/r/?url=https%3A%2F%2Fwww.facebook.com%2Fdawars00%2F" data-href="https://medium.com/r/?url=https%3A%2F%2Fwww.facebook.com%2Fdawars00%2F" class="graf-imageAnchor" data-action="image-link" data-action-observe-only="true" data-tooltip="https://medium.com/r/?url=https%3A%2F%2Fwww.facebook.com%2Fdawars00%2F" data-tooltip-position="right" data-tooltip-type="link"><img class="graf-image" data-image-id="1*BYqdxq-P63Hj_V3bWNk11w.png" data-width="600" data-height="150" src="https://cdn-images-1.medium.com/max/1000/1*BYqdxq-P63Hj_V3bWNk11w.png"><div class="crosshair u-ignoreBlock"></div></a></div><figcaption class="imageCaption" contenteditable="true" data-default-value="Type caption for image (optional)" style="width: 200%; left: -100%;"><span class="defaultValue">Type caption for image (optional)</span><br></figcaption></figure><figure tabindex="0" contenteditable="false" name="bfd7" class="graf graf--figure graf--layoutOutsetRowContinue is-defaultValue is-partialWidth graf-after--figure" style="width: 50%;"><div class="aspectRatioPlaceholder is-locked"><div class="aspectRatioPlaceholder-fill" style="padding-bottom: 25%;"></div><a href="https://medium.com/r/?url=https%3A%2F%2Ftwitter.com%2Fdawars00" data-href="https://medium.com/r/?url=https%3A%2F%2Ftwitter.com%2Fdawars00" class="graf-imageAnchor" data-action="image-link" data-action-observe-only="true" data-tooltip="https://medium.com/r/?url=https%3A%2F%2Ftwitter.com%2Fdawars00" data-tooltip-position="right" data-tooltip-type="link"><img class="graf-image" data-image-id="1*k5mtAKLYS7jZdX_MDr8q6Q.png" data-width="600" data-height="150" src="https://cdn-images-1.medium.com/max/1000/1*k5mtAKLYS7jZdX_MDr8q6Q.png"><div class="crosshair u-ignoreBlock"></div></a></div><figcaption class="imageCaption" contenteditable="true" data-default-value="Type caption for image (optional)" style="width: 200%; left: -100%;"><span class="defaultValue">Type caption for image (optional)</span><br></figcaption></figure></div>
+<div>
+  <a href="https://facebook.com/dawars00" >
+     <img width="600" height="150" src="/wp-content/uploads/2018/09/facebook_follow.png">
+  </a>
+   <a href="https://twitter.com/dawars00" >
+     <img width="600" height="150" src="/wp-content/uploads/2018/09/twitter_follow.png">
+  </a>
+  </div>
+  
