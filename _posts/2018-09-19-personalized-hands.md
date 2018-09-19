@@ -1,8 +1,9 @@
 ---
 title: 'Personalized Hand Models for VR - For a truly immersive experience'
-date: 2018-09-019T14:34:15+00:00
+date: 2018-09-19T14:34:15+00:00
 author: dawars
 layout: post
+hidden: true
 ---
 <h4>For a truly immersive experience</h4>
 <div style="width: 1089px" class="wp-caption aligncenter">
