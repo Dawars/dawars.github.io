@@ -3,7 +3,6 @@ title: 'Personalized Hand Models for VR'
 date: 2018-09-19T14:34:15+00:00
 author: dawars
 layout: post
-hidden: true
 ---
 <h4>For a truly immersive experience</h4>
 <div style="width: 1089px" class="wp-caption aligncenter">
@@ -70,7 +69,9 @@ Skeleton with Blend Weights</p>
 <p>
 I managed to set up the blend shapes by hand but that was not an option for the rig. I would have had to manually set blend weights for every one of the 778 vertices for every 16 joints.
 </p>
-<hr/>
+<br/>
+<br/>
+<br/>
 <p>
 Fortunately, I found a better way, scripting! Maya supports two languages for scripting: MEL and Python. (That means Python)
 </p>
