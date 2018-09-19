@@ -40,7 +40,7 @@ Recent advancements in Artificial Intelligence made it possible to take personal
 <p>
 <h2>Online Demo</h2>
 <p>
-  Take a look at my interactive demo <a href="/mano/" taget="_blank">here</a>. You can change the shape of the hand by adjusting the sliders on the right.
+  Take a look at my interactive demo <a href="/mano/" target="_blank">here</a>. You can change the shape of the hand by adjusting the sliders on the right.
 </p>
 <p>
 Try finding the right parameters for your hand, let's see if you can.😉<br/>
@@ -48,10 +48,10 @@ Leave a comment with your results.
 </p>
 <div style="width: 1089px" class="wp-caption aligncenter">
   <img class="size-medium" src="/mano/images/banner.png" alt="Deformable hand demo" />
-  <p class="wp-caption-text">Deformable Hand <a href="/mano/" taget="_blank">Demo</a> </p>
+  <p class="wp-caption-text">Deformable Hand <a href="/mano/" target="_blank">Demo</a> </p>
 </div>
 <h2>The Model</h2>
-<p>As a starting point, I'm using the <a href="http://mano.is.tue.mpg.de" taget="_blank">Mano model</a>. It is a parametric hand model published by the <a href="http://ps.is.tue.mpg.de" taget="_blank">Perceiving Systems Department</a> in Tübingen. 
+<p>As a starting point, I'm using the <a href="http://mano.is.tue.mpg.de" target="_blank">Mano model</a>. It is a parametric hand model published by the <a href="http://ps.is.tue.mpg.de" target="_blank">Perceiving Systems Department</a> in Tübingen. 
 </p>
 <p>I'll get into more details in the following article. If you are interested, make sure you've clicked the <i>Follow</i> button next to my name.
 </p>
@@ -77,7 +77,7 @@ I managed to set up the blend shapes by hand but that was not an option for the 
 Fortunately, I found a better way, scripting! Maya supports two languages for scripting: MEL and Python. (That means Python)
 </p>
 <p>
-  There is a <a href="https://plugins.jetbrains.com/plugin/8218-mayacharm" taget="_blank">plugin</a> for my favorite IDE, PyCharm, which connects to the Python interpreter run by Maya and executes code on it. Now I can use those matrices I saved earlier. This made the whole process a very pleasant experience.
+  There is a <a href="https://plugins.jetbrains.com/plugin/8218-mayacharm" target="_blank">plugin</a> for my favorite IDE, PyCharm, which connects to the Python interpreter run by Maya and executes code on it. Now I can use those matrices I saved earlier. This made the whole process a very pleasant experience.
 </p>
 <div class="wp-caption">
 <img src="/wp-content/uploads/2018/09/maya_python_ide.png" alt="Executing Python code in Maya"/>
@@ -86,7 +86,7 @@ Fortunately, I found a better way, scripting! Maya supports two languages for sc
 
 <h2>Leap Motion</h2>
 <p>
-To see if everything worked correctly I imported the model in Unity and paired it up with <a href="https://www.leapmotion.com/" taget="_blank">Leap Motion</a>. Leap Motion is a small device that can track your hand movements in real-time.
+To see if everything worked correctly I imported the model in Unity and paired it up with <a href="https://www.leapmotion.com/" target="_blank">Leap Motion</a>. Leap Motion is a small device that can track your hand movements in real-time.
 </p>
 <p>
 Unfortunately, it is not precise enough to be able to track arbitrary hand poses, but a fun toy nevertheless. This is due to the model Leap Motion uses which prefers more common gestures. At the end of the video, I touch each of my fingertips with my thumb, but they don't move separately and don't make contact.
