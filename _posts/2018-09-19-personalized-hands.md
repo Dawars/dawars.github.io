@@ -70,6 +70,7 @@ Skeleton with Blend Weights</p>
 <p>
 I managed to set up the blend shapes by hand but that was not an option for the rig. I would have had to manually set blend weights for every one of the 778 vertices for every 16 joints.
 </p>
+<hr/>
 <p>
 Fortunately, I found a better way, scripting! Maya supports two languages for scripting: MEL and Python. (That means Python)
 </p>
@@ -125,7 +126,7 @@ Currently, I'm finishing up cleaning the training data and starting to train a n
 </div>
 <hr/>
 If you liked this article, follow me on medium and follow me on social media.
-Never miss anything! I write about the intersection of Machine Learning and Computer Graphics.
+Never miss anything! I write about the intersection of <i>Machine Learning</i> and <i>Computer Graphics</i>.
 <div>
   <a href="https://facebook.com/dawars00" >
      <img width="350" src="/wp-content/uploads/2018/09/facebook_follow.png">
