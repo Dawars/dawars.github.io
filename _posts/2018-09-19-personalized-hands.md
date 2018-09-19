@@ -17,6 +17,7 @@ When playing a game, you see the body and hands of your playable avatar instead 
 <p>
 This is even more relevant in virtual reality, where the control is, literally, in the player's hands. Hand-object interaction is in the center of a great virtual reality experience.
 </p>
+<!--more-->
 <p>
 Seeing someone else's hands move instead of your own feels uncanny and causes <i>cognitive dissonance</i>. Although this sounds like a small detail, it can really break the immersion, especially in VR. To work around this, most games apply clever tricks, like covering the player's hands or showing gloves instead.
 </p>
@@ -126,14 +127,13 @@ Currently, I'm finishing up cleaning the training data and starting to train a n
 <img src="/wp-content/uploads/2018/09/handvr_network.png" alt="Neural network architecture"/>
 </div>
 <hr/>
-If you liked this article, follow me on medium and follow me on social media.
+If you liked this article, follow me on medium and follow me on social media.<br/>
 Never miss anything! I write about the intersection of <i>Machine Learning</i> and <i>Computer Graphics</i>.
 <div>
-  <a href="https://facebook.com/dawars00" >
+  <a href="https://facebook.com/dawars00" target="_blank">
      <img width="350" src="/wp-content/uploads/2018/09/facebook_follow.png">
   </a>
-   <a href="https://twitter.com/dawars00" >
+   <a href="https://twitter.com/dawars00" target="_blank">
      <img width="350" src="/wp-content/uploads/2018/09/twitter_follow.png">
   </a>
   </div>
-  
