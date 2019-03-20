@@ -9,7 +9,7 @@ layout: post
 <h4>For a truly immersive experience</h4>
 <div style="width: 1089px" class="wp-caption aligncenter">
 
-<img src="https://dawars.me/wp-content/uploads/2016/08/the_gallery_hands.jpg" alt="General hand model" height="200" />
+<img src="https://dawars.me/wp-content/uploads/2016/08/the_gallery_hands.jpg" alt="General hand model" width="200" />
 <img src="https://github.com/Dawars/handvr/raw/master/img/hand_anim.gif" alt="Hand shape space" width="200" />
 
 </div>
