@@ -11,7 +11,7 @@ author: dawars
 
     <p>I am a Computer Engineer student interested in Machine Learning and VR.</p>
 
-    <p>Here I will post about my projects and hobbies.</p>
+    <p><a href="/wp-content/uploads/2019/03/gdc19_cv.pdf">Curriculum Vitae</a></p>
 
     <p>Feel free to contact me at <a href="mailto:dawars00@gmail.com">dawars00@gmail.com</a> or at <a href="mailto:me@dawars.me">me@dawars.me</a> via <a href="https://protonmail.com">ProtonMail</a>.</p>
     <p>&nbsp;</p>
