@@ -224,18 +224,20 @@ input[type=submit], input[type=reset] {background-color:#555; color:#fff; border
 
 /* Added by Dawars: top follower box */
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     #top-social-box {
         display: block !important;
     }
-    article h3{
+    #content article h3{
         font-size: 26px !important;
     }
-    article h4{
+	#content article h4{
         font-size: 16px !important;
+		margin-bottom: 20px;
     }
-    article p{
+	#content article p{
         font-size: 15px !important;
+		margin-bottom: 10px;
     }
 }
 /* Added by Dawars: embedded videos */
