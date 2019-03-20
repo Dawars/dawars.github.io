@@ -8,7 +8,10 @@ layout: post
 ---
 <h4>For a truly immersive experience</h4>
 <div style="width: 1089px" class="wp-caption aligncenter">
-  <img class="size-medium" src="/wp-content/uploads/2018/09/hands_shape_banner.png" alt="Hands with different shapes" />
+
+<img src="https://dawars.me/wp-content/uploads/2016/08/the_gallery_hands.jpg" alt="General hand model" height="200" />
+<img src="https://github.com/Dawars/handvr/raw/master/img/hand_anim.gif" alt="Hand shape space" width="200" />
+
 </div>
 <p>
 I've always preferred story-driven games to the competitive ones. When diving into a game like this, one experiences a variety of emotions and may also grow as a person at the end. Despite all that I came to the realization that we might control these characters  — our avatars in a way—, but in effect, they have nothing to do with us!
