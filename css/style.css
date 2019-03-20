@@ -228,12 +228,24 @@ input[type=submit], input[type=reset] {background-color:#555; color:#fff; border
     #top-social-box {
         display: block !important;
     }
-    #content article h3{
-        font-size: 26px !important;
+
+    #top-social-box aside {
+        margin: 20px;
     }
-	#content article h4{
+
+    .post-divider {
+        margin: 20px auto;
+    }
+
+    #content article h3 {
+        font-size: 26px !important;
+        margin-bottom: 15px;
+    }
+
+    #content article h4{
         font-size: 16px !important;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
+		margin-top: 15px;
     }
 	#content article p{
         font-size: 15px !important;
