@@ -221,6 +221,14 @@ input[type=submit], input[type=reset] {background-color:#555; color:#fff; border
 	.author-date {width:100%;}
 	.post-tags {float:left; width:100%; text-align:left;}
 }
+
+/* Added by Dawars: top follower box */
+
+@media (max-width: 768px) {
+    #top-social-box {
+        display: block;
+    }
+}
 /* Added by Dawars: embedded videos */
 .video-container {
 	position: relative;
