@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Multiplane Image Interactive Viewer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+<script id="vs" type="x-shader/x-vertex">
+	uniform vec2 size;
+	out vec2 vUv;
+
+	void main() {
+
+		gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+		// Convert position.xy to 1.0-0.0
+
+		vUv.xy = position.xy / size + 0.5;
+		vUv.y = 1.0 - vUv.y; // original data is upside down
+
+	}
+	</script>
+
+<script id="fs" type="x-shader/x-fragment">
+	precision highp float;
+	precision highp int;
+	precision highp sampler2DArray;
+
+	uniform sampler2DArray diffuse;
+	in vec2 vUv;
+	uniform vec2 mouse;
+	uniform float depths[32];
+	uniform mat3 intrinsics;
+	uniform mat3 intrinsicsInv;
+
+	vec2 computePixelLocation(float depth, vec2 uv, vec2 pos) {
+		float a = -depth;
+
+		mat3 frac = mat3(
+		1.,0.,0.,
+		0.,1.,0.,
+		pos.x/a, pos.y/a, 1.
+		);
+
+		vec3 uvSource = intrinsics * frac *intrinsicsInv * vec3(uv, 1);
+		return uvSource.xy / uvSource.z;
+	}
+
+	void main() {
+
+		vec4 outPixel = vec4(0);
+		outPixel.a = 1.0;
+
+		for(int i = 0; i < depths.length(); ++i) {
+
+			vec2 uv = computePixelLocation(depths[i], vUv, mouse / 100000.);
+			vec4 pixel = texture( diffuse, vec3(uv, i) );
+
+			vec3 rgb = pixel.rgb;
+			float alpha = pixel.a;
+
+			if (i == 0) {
+			    outPixel.rgb = rgb;
+			} else {
+			    vec3 rgb_by_alpha = rgb * alpha;
+			    outPixel.rgb = rgb_by_alpha + outPixel.rgb * (1.0 - alpha);
+			}
+		}
+		gl_FragColor = outPixel;
+	}
+	</script>
+<script type="text/javascript" src="https://unpkg.com/three@0.119.1/build/three.min.js"></script>
+<body>
+
+<script type="module">
+
+    function inv_depths( start_depth, end_depth, num_depths ) {
+
+        /**
+         * Sample reversed, sorted inverse depths between a near and far plane.
+
+         Args:
+         start_depth: The first depth (i.e. near plane distance).
+         end_depth: The last depth (i.e. far plane distance).
+         num_depths: The total number of depths to create. start_depth and
+         end_depth are always included and other depths are sampled
+         between them uniformly according to inverse depth.
+         Returns:
+         The depths sorted in descending order (so furthest first). This order is
+         useful for back to front compositing.*/
+
+        const inv_start_depth = 1.0 / start_depth;
+        const inv_end_depth = 1.0 / end_depth;
+        let depths = [ start_depth, end_depth ];
+        for (let i = 1; i < num_depths - 1; i ++) {
+
+            const fraction = i / ( num_depths - 1 );
+            const inv_depth = inv_start_depth + ( inv_end_depth - inv_start_depth ) * fraction;
+            depths.push( 1.0 / inv_depth );
+            depths.sort( function ( a, b ) {
+                return b - a;
+            } );
+        }
+
+        return depths;
+    }
+
+    function getParamValue(paramName)
+    {
+        var url = window.location.search.substring(1); //get rid of "?" in querystring
+        var qArray = url.split('&'); //get key-value pairs
+        for (var i = 0; i < qArray.length; i++)
+        {
+            var pArr = qArray[i].split('='); //split key and value
+            if (pArr[0] === paramName)
+                return decodeURI(pArr[1]); //return value
+        }
+    }
+
+    const mpiPath = getParamValue("data") || 'images/mpi_bikes.zip';
+    console.log(mpiPath);
+
+    // import * as THREE from 'https://unpkg.com/three@0.119.1/build/three.min.js';
+
+    // import Stats from 'https://unpkg.com/three@0.119.1/examples/jsm/libs/stats.module.js';
+    import { JSZip } from 'https://unpkg.com/three@0.119.1/examples/jsm/libs/jszip.module.min.js';
+
+    import { WEBGL } from 'https://unpkg.com/three@0.119.1/examples/jsm/WebGL.js';
+
+    if ( WEBGL.isWebGL2Available() === false ) {
+
+        document.body.appendChild( WEBGL.getWebGL2ErrorMessage() );
+
+    } else {
+
+        var camera, scene, mesh, renderer, stats;
+
+        var depthStep = 0.4;
+        var mouse = new THREE.Vector2();
+
+        init();
+        animate();
+
+        function init() {
+            var container = document.createElement( 'div' );
+            document.body.appendChild( container );
+
+
+            camera = new THREE.PerspectiveCamera( 90, window.innerWidth / window.innerHeight, 0.1, 2000 );
+            camera.position.z = 1;
+
+            scene = new THREE.Scene();
+
+            new THREE.FileLoader()
+                .setResponseType( 'arraybuffer' )
+                .load(mpiPath , function ( data ) {
+
+                    let zip = new JSZip( data );
+                    let array = zip.files['mpi_byte_full'].asUint8Array();
+                    let info = JSON.parse( zip.files['info.json'].asText() );
+                    const num_depth_planes = info['num_depth_planes'];
+                    const nearPlane = info['near_plane'];
+                    const farPlane = info['far_plane'];
+                    const width = info['width']; // padded, final image size
+                    const height = info['height'];
+                    const fx = info['fx'];
+                    const fy = info['fy'];
+
+                    let padX = 8;
+                    let padY = 8;
+
+                    let original_width = width - 2 * padX;
+                    let original_height = height - 2 * padY;
+
+                    // size after crop_to_multiple
+                    let eventual_width = width - ( width % 16 );
+                    let eventual_height = height - ( height % 16 );
+                    let cx = eventual_width / 2.;
+                    let cy = eventual_height / 2.;
+
+                    const intrinsics = new THREE.Matrix3();
+                    intrinsics.set(
+                        original_width * fx, 0, cx,
+                        0, original_height * fy, cy,
+                        0, 0, 1 );
+                    const intrinsicsInv = new THREE.Matrix3();
+                    intrinsicsInv.set(
+                        1 / ( original_width * fx ), 0, - cx / ( original_width * fx ),
+                        0, 1 / ( original_height * fy ), - cy / ( original_height * fy ),
+                        0, 0, 1 );
+
+                    var planeHeight = 2 * height / original_height;
+                    var planeWidth = width * planeHeight / height;
+
+                    const depthValues = inv_depths( nearPlane, farPlane, num_depth_planes );
+
+                    // todo decode from jpeg
+                    var texture = new THREE.DataTexture2DArray( array, width, height, num_depth_planes );
+                    texture.format = THREE.RGBAFormat;
+                    texture.type = THREE.UnsignedByteType;
+                    // texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+
+                    var material = new THREE.ShaderMaterial( {
+                        uniforms: {
+                            diffuse: { value: texture },
+                            mouse: { value: mouse },
+                            depths: { type: 'v1v', value: depthValues },
+                            intrinsics: { type: 'mat3', value: intrinsics },
+                            intrinsicsInv: { type: 'mat3', value: intrinsicsInv },
+                            size: { value: new THREE.Vector2( planeWidth, planeHeight ) }
+                        },
+                        vertexShader: document.getElementById( 'vs' ).textContent.trim(),
+                        fragmentShader: document.getElementById( 'fs' ).textContent.trim()
+                    } );
+
+                    var geometry = new THREE.PlaneBufferGeometry( planeWidth, planeHeight );
+
+                    mesh = new THREE.Mesh( geometry, material );
+
+                    scene.add( mesh );
+
+                } );
+
+            // 2D Texture array is available on WebGL 2.0
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setPixelRatio( window.devicePixelRatio );
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+
+            // stats = new Stats();
+            // container.appendChild( stats.dom );
+
+            window.addEventListener( 'resize', onWindowResize, false );
+            window.addEventListener( 'mousemove', onMouseMove, false );
+
+        }
+
+        function onWindowResize() {
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+
+        function onMouseMove( event ) {
+            mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+            mouse.y = ( event.clientY / window.innerHeight ) * 2 - 1;
+            // console.log(mouse);
+        }
+
+        function animate() {
+            setTimeout( function() {
+
+                requestAnimationFrame( animate );
+
+            }, 1000 / 30 );
+
+            if (mesh) {
+
+                depthStep += 0.1;
+
+                mesh.material.uniforms["mouse"].value = mouse;//unit?
+
+            }
+
+            render();
+            // stats.update();
+
+        }
+
+        function render() {
+
+            renderer.render( scene, camera );
+
+        }
+    }
+</script>
+<!--<script type="text/javascript" src="./js/iframeResizer.contentWindow.min.js"></script>-->
+</body>
+</html>
