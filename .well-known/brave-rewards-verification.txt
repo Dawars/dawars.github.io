@@ -1,1 +1,4 @@
-brave-ledger-verification=9adb918c29b2be164aa4356d76c6c1595256fe736e23bb0392253fea5dc94f28
+This is a Brave Rewards publisher verification file.
+
+Domain: dawars.me
+Token: 9adb918c29b2be164aa4356d76c6c1595256fe736e23bb0392253fea5dc94f28
