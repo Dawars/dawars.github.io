@@ -9,3 +9,4 @@ excerpt_separator: "<!--more-->"
 paginate: 10
 paginate_path: "/:num"
 layout: default
+keep_files: [".well-known", "anime"]
