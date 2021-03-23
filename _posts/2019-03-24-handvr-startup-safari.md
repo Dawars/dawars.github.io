@@ -15,7 +15,7 @@ layout: post
 
 <!--more-->
 
-<p>There are 10 sliders corresponding to the 10 most significant principal components (<a href="https://dawars.me%/mano" target="_blank">dawars.me/mano</a>) responsible for properties like size, thickness all the way to small changes that are difficult to describe in words.<br>By changing these sliders, the hand models update in real time.</p>
+<p>There are 10 sliders corresponding to the 10 most significant principal components (<a href="https://dawars.me/mano" target="_blank">dawars.me/mano</a>) responsible for properties like size, thickness all the way to small changes that are difficult to describe in words.<br>By changing these sliders, the hand models update in real time.</p>
 
 <p>The users really liked that they can experience having different hand shapes. It made them understand how having different anatomy influences simple everyday tasks.</p>
 
