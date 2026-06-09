@@ -7,6 +7,8 @@ tags: ["Neural Rendering", "NeRF", "3D Reconstruction", "Cultural Heritage"]
 layout: post
 ---
 
+<a href="http://arxiv.org/abs/2311.17810" target="_blank">Paper</a> <!--| <a href="https://dawars.me/" target="_blank">Code</a> --> | <a href="https://sangluisme.github.io/assets/img/historcial/historical.mp4" target="_blank">Video</a>
+
 <script type="text/javascript" async
   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
 </script>
@@ -17,7 +19,6 @@ We introduce an approach to reconstruct the 3D geometry of historical buildings 
 
 ![Teaser](/wp-content/uploads/2024/09/teaser.png)
 
-<a href="http://arxiv.org/abs/2311.17810" target="_blank">Paper</a> <!--| <a href="https://dawars.me/" target="_blank">Code</a> --> | <a href="https://sangluisme.github.io/assets/img/historcial/historical.mp4" target="_blank">Video</a>
 
 <iframe src="https://benaco.com/embed/6c7ecafc-3db4-409e-8afa-3d79f12eb4b1" scrolling="no" frameborder="0" allowfullscreen style="width: 100%; height: 60vh; display: block;"></iframe>
 
